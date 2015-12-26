@@ -3,7 +3,7 @@ var path = require("path");
 var webpack = require('webpack');
 var Clean = require('clean-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-// var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 var UglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
     compress: {
         warnings: false
@@ -12,17 +12,25 @@ var UglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var SwigWebpackPlugin = require('swig-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+
 module.exports = {
     entry: {
-        index: './app/js-es6/app.js',
+        index: './app/js/jsx/index.js',
+        // star_result: './app/js/jsx/starResult.js'
+        // 'webpack-dev-server/client?http://127.0.0.1:3000', // WebpackDevServer host and port
+        // 'webpack/hot/only-dev-server',
+        // './src/js/main.js' // Your appʼs entry point
     },
     output: {
         publicPath: "http://127.0.0.1:9090/static/dist/",
         path: path.join(__dirname, 'app/js/'),
-        filename: 'app.js'
+        // path: path.resolve(DEBUG ? __dirname+'app/js_dev/' : __dirname+'app/js_release'),
+        filename: '[name].js'
+        // filename: DEBUG ? '[name].js' : '[chunkhash:8].[name].min.js',
     },
     resolve: {
-        extensions: ['', '.js', '.sass', '.css', '.png', '.jpg', '.woff', '.ttf', '.eot', '.svg'],
+        extensions: ['', '.js', 'jsx', '.sass', '.css', '.png', '.jpg', '.woff', '.ttf', '.eot', '.svg'],
         root: __dirname
     },
     // 新添加的module属性
@@ -37,11 +45,11 @@ module.exports = {
             //     }
             // },
             {
-                test: /\.js?$/,
-                exclude: /(node_modules)/,
+                test: /\.jsx?$/,
+                exclude: /(node_modules|bower_components)/,
                 loader: 'babel', // 'babel-loader' is also a legal name to reference
                 query: {
-                    presets: ['es2015']
+                    presets: ['react', 'es2015']
                 }
             },
             //使用link引用
@@ -83,8 +91,8 @@ module.exports = {
             }]
     },
     plugins: [
-        // commonsPlugin,
-        // UglifyJsPlugin,
+        commonsPlugin,
+        UglifyJsPlugin,
         // new Clean(['./app/js/', './dist/html/']),
         // new HtmlWebpackPlugin(
         //     {

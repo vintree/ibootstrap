@@ -1,0 +1,18 @@
+1.
+class Xxxx extends React.Component
+适用于React开发
+用于公共模块（EP:逻辑/交互）
+
+2.
+Module.exports = Xxx
+适用于模块开发
+用于html公用模块配置（EP:js/css/img/meta ...)
+
+3.
+sass
+所有sass继承base.sass样式
+放在调用js内（EP:放在index.js内）
+
+4.
+css
+用于icon配置,放在Module公用模块调用

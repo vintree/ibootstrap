@@ -1,13 +1,22 @@
 $min-width: 960px;
 $main-color: #4682b4;
-*::before, *::after {
+$btn-border-color: #adadad;
+$line-height: 1.42857143;
+
+*, *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 html, body {
-    //background-color: blue;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 ul, ol {
