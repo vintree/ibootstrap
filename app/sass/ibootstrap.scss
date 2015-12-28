@@ -1,9 +1,12 @@
 @import "./mixin/ellipsis";
 @import "./mixin/margin";
-
+@import "./mixin/middle";
 
 @import "base";
 @import "header";
+
+// 颜色
+@import "color";
 
 // 按钮样式
 @import "buttons";
@@ -20,3 +23,12 @@
 
 // 列表
 @import "list";
+
+// 功能列表
+@import "flist";
+
+// 弹出背景层
+@import "layer";
+
+// 弹出框
+@import "alert";

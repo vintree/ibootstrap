@@ -10,7 +10,7 @@ $base-fontSize: 0.3rem;
 $base-size: 0.3rem;
 
 $base-padding: 0.1rem;
-$base-infoColor: #aaa;
+$base-smallColor: #aaa;
 $base-infoSize: 0.35rem;
 
 $base-primaryColor: #337ab7;
@@ -18,9 +18,11 @@ $base-successColor: #5cb85c;
 $base-infoColor: #5bc0de;
 $base-warningColor: #f0ad4e;
 $base-dangerColor: #d9534f;
+$base-blueColor: #4682b4;
 
 $base-border: 1px solid #DCDCDC;
 
+$base-iconColor: #DCDCDC;
 
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
@@ -66,7 +68,7 @@ div, div[contentEditable], input, textarea, button, a:link {
 }
 
 *[class~=btn] {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, .5);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .5);
 }
 
 // 如何去掉textarea,input的默认样式（IOS上的圆角及内阴影等）

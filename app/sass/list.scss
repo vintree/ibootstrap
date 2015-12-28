@@ -1,5 +1,5 @@
 // 列表
-$list-height: 2rem;
+$list-height: 2.2rem;
 $list-titSize: 0.4rem;
 $list-timeSize: 0.25rem;
 $list-timeColor: #aaa;
@@ -8,14 +8,14 @@ $list-paddingTB: 0.3rem;
 $list-paddingB: 0.1rem;
 
 
-@mixin unit {
-    position: relative;
-    display: flex;
-    flex-flow: row;
-    height: $list-height;
-    padding: 0.1rem 0;
-    border-bottom: $base-border;
-}
+// @mixin unit {
+//     position: relative;
+//     display: flex;
+//     flex-flow: row;
+//     height: $list-height;
+//     padding: 0.1rem 0;
+//     border-bottom: $base-border;
+// }
 
 .list-group {
     display: block;
@@ -71,7 +71,6 @@ $list-paddingB: 0.1rem;
         position: relative;
         padding: $list-paddingTB 0;
         border-bottom: $base-border;
-        // height: $list-height * 2;
         &:last-child {
             border: 0;
         }
@@ -97,10 +96,6 @@ $list-paddingB: 0.1rem;
             }
         }
         .list-time {
-            // position: absolute;
-            // bottom: 0;
-            // left: 0;
-            // height: 0.2rem;
             font-size: $list-timeSize;
             color: $list-timeColor;
         }

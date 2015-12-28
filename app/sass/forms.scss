@@ -25,7 +25,7 @@ $border: 1px solid #ccc;
                 flex: 3;
                 line-height: $base-height;
                 text-align: center;
-                color: $base-infoColor;
+                color: $base-smallColor;
                 font-size: $base-infoSize;
                 @include ellipsis1;
             }

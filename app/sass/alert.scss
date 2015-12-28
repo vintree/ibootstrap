@@ -1,0 +1,40 @@
+// 弹框样式
+
+$alert-border: 1px solid #DCDCDC;
+$alert-width: 85%;
+
+.alert-layer {
+    @include middleFlex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.alert-group {
+    width: $alert-width;
+    background-color: #ffffff;
+    flex-flow: column;
+    display: flex;
+    text-align: center;
+    border-radius: 0.3rem;
+    .alert-tx {
+        flex: 5;
+        @include ellipsis2;
+        @include middleFlex;
+        padding: $base-padding * 6 $base-padding * 2;
+        font-size: $base-size * 1.2;
+    }
+    .alert-btn {
+        flex: 2;
+        color: $base-blueColor;
+        line-height: 3;
+        @include middleFlex;
+        @include ellipsis1;
+        border-top: $alert-border;
+        padding: 0 $base-padding;
+        font-size: $base-size * 1.3;
+    }
+}
