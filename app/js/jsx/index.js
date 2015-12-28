@@ -6,6 +6,16 @@ import addScript from '../common/addScript.js';
 import Header from './_header';
 import List from './_list.js';
 import Head from '../temp/head.js';
+
+
+// ibootstrap 相关组件
+import Tips from "../js/tips.js";
+
+console.log(Tips.init());
+
+
+
+
 var headData = {
   tit: '首页-知乎',
   shareName: '首页-知乎',
@@ -21,24 +31,24 @@ var headData = {
 autoFont.init();
 Head.init(headData);
 
-class Index extends React.Component{
-    constructor() {
-        super();
-    }
-    render() {
-        return (
-            <div>
-                <section>
-                    <Header name="Nate" />
-                </section>
-                <section>
-                    <List name="Nate" />
-                </section>
-            </div>
-        )
-    }
-}
-
-
-
-ReactDOM.render(<Index name="Nate" />, document.getElementById('header'));
+// class Index extends React.Component{
+//     constructor() {
+//         super();
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <section>
+//                     <Header name="Nate" />
+//                 </section>
+//                 <section>
+//                     <List name="Nate" />
+//                 </section>
+//             </div>
+//         )
+//     }
+// }
+//
+//
+//
+// ReactDOM.render(<Index name="Nate" />, document.getElementById('header'));

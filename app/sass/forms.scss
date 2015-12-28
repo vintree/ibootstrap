@@ -1,0 +1,47 @@
+$border: 1px solid #ccc;
+
+.form-group {
+    padding-left: $base-padding;
+    border-top: $border;
+    border-bottom: $border;
+    @include marginTB;
+    .inp-group {
+        display: flex;
+        flex-flow: row;
+        border-bottom: $border;
+        height: $base-height;
+        &:last-child {
+            border: 0;
+        }
+        &.inp-code {
+            input {
+                flex: 5;
+                height: 100%;
+                font-size: $base-fontSize;
+                border-style: none;
+                color: #333;
+            }
+            .inp-code-btn {
+                flex: 3;
+                line-height: $base-height;
+                text-align: center;
+                color: $base-infoColor;
+                font-size: $base-infoSize;
+                @include ellipsis1;
+            }
+        }
+        input {
+            flex: 8;
+            height: 100%;
+            font-size: $base-fontSize;
+            border-style: none;
+            color: #333;
+        }
+        label {
+            flex: 2;
+            text-align: right;
+            line-height: $base-height;
+            @include ellipsis1;
+        }
+    }
+}

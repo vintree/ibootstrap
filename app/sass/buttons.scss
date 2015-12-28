@@ -1,23 +1,22 @@
 /*
     按钮
 */
-$btn-line-height: 0.55rem;
-$font-size: 0.3rem;
 .btn {
     width: 100%;
-    display: block;
+    display: inline-block;
     text-align: center;
     cursor: pointer;
     border: 1px solid transparent;
     white-space: nowrap;
     background-color: white;
     -webkit-user-select: none;
-    border-radius: 4px;
-    line-height: $btn-line-height;
-    font-size: $font-size;
+    border-radius: 3px;
+    line-height: $base-height;
+    font-size: $base-fontSize;
     text-overflow: ellipsis;
     overflow: hidden;
-    margin: .1rem 0;
+    @include marginTB;
+    // margin: .1rem 0;
 }
 
 // 禁止样式
@@ -64,5 +63,9 @@ $font-size: 0.3rem;
 }
 
 .btn-radius {
-    border-radius: .3rem;
+    border-radius: .5rem;
+}
+
+.btn-unradius {
+    border-radius: 0;
 }

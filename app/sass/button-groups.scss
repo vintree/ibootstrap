@@ -18,36 +18,30 @@
 
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
+    background-color: $base-primaryColor;
     border-color: #2e6da4;
 }
 
 .btn-success {
     color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-}
-
-.btn-success {
-    color: #fff;
-    background-color: #5cb85c;
+    background-color: $base-successColor;
     border-color: #4cae4c;
 }
 
 .btn-info {
     color: #fff;
-    background-color: #5bc0de;
+    background-color: $base-infoColor;
     border-color: #46b8da;
 }
 
 .btn-warning {
     color: #fff;
-    background-color: #f0ad4e;
+    background-color: $base-warningColor;
     border-color: #eea236;
 }
 
 .btn-danger {
     color: #fff;
-    background-color: #d9534f;
+    background-color: $base-dangerColor;
     border-color: #d43f3a;
 }

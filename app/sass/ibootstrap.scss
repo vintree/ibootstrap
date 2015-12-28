@@ -1,3 +1,7 @@
+@import "./mixin/ellipsis";
+@import "./mixin/margin";
+
+
 @import "base";
 @import "header";
 
@@ -7,3 +11,12 @@
 
 //  分配长度
 @import "allot";
+
+// 表单
+@import "forms";
+
+// 提示
+@import "tips";
+
+// 列表
+@import "list";
