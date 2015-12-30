@@ -1,0 +1,49 @@
+// 功能列表
+
+$flist-iconSize: .7rem;
+$flist-size: .35rem;
+$flist-color: #808080;
+$flist-height: $base-height * 1.3;
+
+.flist-group {
+    display: flex;
+    flex-flow: row;
+    margin: 0;
+    padding: 0;
+    .flist-unit-group {
+        height: $flist-height;
+        line-height: $flist-height;
+        &:nth-child(1) {
+            flex: 1;
+            text-align: center;
+            font-size: $flist-iconSize/1.2;
+        }
+        &:nth-child(2) {
+            flex: 5;
+            // display: flex;
+            // flex-flow: row;
+            // border-bottom: $base-border;
+            .flist-tx {
+               flex: 5;
+               display: flex;
+               flex-flow: row;
+               border-bottom: $base-border;
+               &:last-child {
+                   border-bottom: 0;
+               }
+               .flist-tit {
+                   flex: 6;
+                   font-size: $flist-size;
+                   color: $flist-color;
+               }
+               .flist-rightIcon {
+                   flex: 1;
+                   text-align: right;
+                   font-size: $flist-iconSize;
+                   color: $base-iconColor;
+               }
+           }
+        }
+    }
+
+}

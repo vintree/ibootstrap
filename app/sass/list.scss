@@ -1,0 +1,103 @@
+// 列表
+$list-height: 2.2rem;
+$list-titSize: 0.4rem;
+$list-timeSize: 0.25rem;
+$list-timeColor: #aaa;
+
+$list-paddingTB: 0.3rem;
+$list-paddingB: 0.1rem;
+
+
+// @mixin unit {
+//     position: relative;
+//     display: flex;
+//     flex-flow: row;
+//     height: $list-height;
+//     padding: 0.1rem 0;
+//     border-bottom: $base-border;
+// }
+
+.list-group {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top: $base-border;
+    border-bottom: $base-border;
+    margin: 0.1rem 0;
+}
+
+.list-img1-group {
+    .list-unit {
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        height: $list-height;
+        padding: $list-paddingTB 0;
+        border-bottom: $base-border;
+        &:last-child {
+            border: 0;
+        }
+        .list-tx {
+            position: relative;
+            flex: 5;
+            padding-right: 0.1rem;
+            .list-tit {
+                font-size: $list-titSize;
+                color: $base-color;
+                @include ellipsis2;
+            }
+            .list-time {
+                position: absolute;
+                bottom: -.05rem;
+                left: 0;
+                font-size: $list-timeSize;
+                color: $list-timeColor;
+                text-align: justify;
+            }
+        }
+        .list-img {
+            flex: 2;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.list-img3-group {
+    .list-unit {
+        position: relative;
+        padding: $list-paddingTB 0;
+        border-bottom: $base-border;
+        &:last-child {
+            border: 0;
+        }
+        .list-tit {
+            font-size: $list-titSize;
+            color: $base-color;
+            @include ellipsis2;
+            padding-bottom: $list-paddingB;
+        }
+        .list-img {
+            display: flex;
+            flex-flow: row;
+            height: $list-height;
+            padding-bottom: $list-paddingB;
+            img {
+                flex: 1;
+                width: 100%;
+                height: 100%;
+                padding-right: 0.05rem;
+                img:last-child {
+                    padding: 0;
+                }
+            }
+        }
+        .list-time {
+            font-size: $list-timeSize;
+            color: $list-timeColor;
+        }
+    }
+}
