@@ -10,6 +10,7 @@ import Head from '../temp/head.js';
 
 // ibootstrap 相关组件
 import Tips from "../js/tips.js";
+<<<<<<< HEAD
 import Alert from "../js/alert.js";
 import Confirm from "../js/confirm.js";
 Tips.init();
@@ -18,6 +19,10 @@ Confirm.init();
 
 window._confirm = Confirm;
 
+=======
+
+console.log(Tips.init());
+>>>>>>> 9cd847022656f712df117a702dcb633c54e1a621
 
 
 

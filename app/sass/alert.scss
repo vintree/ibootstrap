@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 // 弹框样式 alert
+=======
+// 弹框样式
+
+$alert-border: 1px solid #DCDCDC;
+$alert-width: 85%;
+>>>>>>> 9cd847022656f712df117a702dcb633c54e1a621
 
 .alert-layer {
     @include middleFlex;
@@ -11,7 +18,11 @@
 }
 
 .alert-group {
+<<<<<<< HEAD
     width: $hint-width;
+=======
+    width: $alert-width;
+>>>>>>> 9cd847022656f712df117a702dcb633c54e1a621
     background-color: #ffffff;
     flex-flow: column;
     display: flex;
@@ -19,12 +30,16 @@
     border-radius: 0.3rem;
     .alert-tx {
         flex: 5;
+<<<<<<< HEAD
         color: #000000;
+=======
+>>>>>>> 9cd847022656f712df117a702dcb633c54e1a621
         @include ellipsis2;
         @include middleFlex;
         padding: $base-padding * 6 $base-padding * 2;
         font-size: $base-size * 1.2;
     }
+<<<<<<< HEAD
     .alert-fun {
         flex: 2;
         color: $hint-color;
@@ -32,6 +47,15 @@
         @include middleFlex;
         @include ellipsis1;
         border-top: $hint-border;
+=======
+    .alert-btn {
+        flex: 2;
+        color: $base-blueColor;
+        line-height: 3;
+        @include middleFlex;
+        @include ellipsis1;
+        border-top: $alert-border;
+>>>>>>> 9cd847022656f712df117a702dcb633c54e1a621
         padding: 0 $base-padding;
         font-size: $base-size * 1.3;
     }

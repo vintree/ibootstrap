@@ -1,5 +1,9 @@
 var tips = {
+<<<<<<< HEAD
     init: () =>  {
+=======
+    init: function() {
+>>>>>>> 9cd847022656f712df117a702dcb633c54e1a621
         $('.tips-close').on('click', function() {
             var pobj = $(this).parents('.tips-top-group');
             if(!pobj.hasClass('.fade')) {
