@@ -3,21 +3,21 @@ const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 
 
-gulp.task('es6', () => {
+gulp.task('es6', function() {
     return gulp.src('gapp/js/jsx/**/*.js')
     .pipe(babel({
         presets: ['es2015']
     }))
-    .pipe(gulp.dest('gapp/js/app'));
+    .pipe(gulp.dest('gapp/js/mjs'));
 });
 
-gulp.task('sass',  () => {
-    gulp.src('gapp/sass/**/*.scss')
+gulp.task('sass', function() {
+    gulp.src('gapp/sass/ibootstrap.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./gapp/css'));
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', function() {
     gulp.watch('gapp/js/jsx/index.js', ['es6']);
     gulp.watch('gapp/sass/**/*.scss', ['sass']);
 });

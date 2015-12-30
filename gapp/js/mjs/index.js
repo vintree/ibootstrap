@@ -1,21 +1,28 @@
-require('../../sass/ibootstrap.scss');
-import React from 'react';
-import ReactDOM from 'react-dom';
-import autoFont from '../common/autoFont.js';
-import addScript from '../common/addScript.js';
-import Header from './_header';
-import List from './_list.js';
-import Head from '../temp/head.js';
+"use strict";
+
+var _tips = require("../js/tips.js");
+
+var _tips2 = _interopRequireDefault(_tips);
+
+var _alert = require("../js/alert.js");
+
+var _alert2 = _interopRequireDefault(_alert);
+
+var _confirm = require("../js/confirm.js");
+
+var _confirm2 = _interopRequireDefault(_confirm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// require('../../sass/ibootstrap.scss');
 
 // ibootstrap 相关组件
-import Tips from "../js/tips.js";
-import Alert from "../js/alert.js";
-import Confirm from "../js/confirm.js";
 
-Tips.init();
-window._alert = Alert;
-window._confirm = Confirm;
+_tips2.default.init();
+// Alert.init();
+_confirm2.default.init();
 
+window._confirm = _confirm2.default;
 
 var headData = {
   tit: '首页-知乎',
@@ -26,8 +33,8 @@ var headData = {
   keywords: '搜狐V星团',
   desc: '搜狐V星团是为粉丝精心打造的追星互动平台！只要你来，就有机会零距离接触明星！快为你最爱的明星点赞吧！',
   admins: '25250114746637056375',
-  favicon: '../img/favicon.ico',
-}
+  favicon: '../img/favicon.ico'
+};
 
 autoFont.init();
 Head.init(headData);

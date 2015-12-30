@@ -1,0 +1,4 @@
+// 选中默认样式
+@mixin background-selected {
+    background-color: rgba(0,0,0,0.1);
+}

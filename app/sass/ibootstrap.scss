@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 // mixin集
-=======
->>>>>>> 9cd847022656f712df117a702dcb633c54e1a621
 @import "./mixin/ellipsis";
 @import "./mixin/margin";
 @import "./mixin/middle";
+@import "./mixin/background";
+
 
 @import "base";
 @import "header";
@@ -35,10 +34,6 @@
 @import "layer";
 
 // 弹出框
-<<<<<<< HEAD
 @import "hint";//父类库
 @import "alert";
 @import "confirm";
-=======
-@import "alert";
->>>>>>> 9cd847022656f712df117a702dcb633c54e1a621

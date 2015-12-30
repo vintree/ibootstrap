@@ -92,7 +92,7 @@ module.exports = {
     },
     plugins: [
         commonsPlugin,
-        UglifyJsPlugin,
+        // UglifyJsPlugin,
         // new Clean(['./app/js/', './dist/html/']),
         // new HtmlWebpackPlugin(
         //     {
