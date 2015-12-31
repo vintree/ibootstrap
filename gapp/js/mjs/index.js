@@ -14,7 +14,7 @@ var _confirm2 = _interopRequireDefault(_confirm);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// require('../../sass/ibootstrap.scss');
+require('../../sass/ibootstrap.scss');
 
 // ibootstrap 相关组件
 

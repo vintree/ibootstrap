@@ -1,18 +1,21 @@
 // mixin集
-@import "./mixin/ellipsis";
-@import "./mixin/margin";
-@import "./mixin/middle";
-@import "./mixin/background";
+@import "./mixin/ellipsis";// 省略
+@import "./mixin/margin";// 间隔
+@import "./mixin/middle";// 居中
+@import "./mixin/background";// 背景色
+@import "./mixin/select";// 选择
 
-
+// 全局基本样式
 @import "base";
-@import "header";
+
+// 默认独立样式
+@import "default";
 
 // 颜色
 @import "color";
 
 // 按钮样式
-@import "buttons";
+@import "buttons";//父类库
 @import "button-groups";
 
 //  分配长度

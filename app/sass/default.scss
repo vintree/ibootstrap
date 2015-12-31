@@ -1,0 +1,9 @@
+// 默认独立样式
+
+.defaultBackground {
+    @include background-selected;
+}
+
+.defaultSelect {
+    @include select-text;
+}

@@ -49,6 +49,9 @@ $alert-width: 85%;
         border-top: $alert-border;
         padding: 0 $base-padding;
         font-size: $base-size * 1.3;
+        &:hover {
+            @include background-selected;
+        }
     }
 }
 
