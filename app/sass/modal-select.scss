@@ -1,0 +1,45 @@
+// 弹出选择模块
+
+.select-layer {
+    @include flexCenter;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    &.active {
+        display: flex;
+        animation: show 0.5s;
+        animation-fill-mode: forwards;
+    }
+    &.unactive {
+        display: flex;
+        animation: hide 0.3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.2, 1.2);
+    }
+}

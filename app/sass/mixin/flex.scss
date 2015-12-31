@@ -8,7 +8,7 @@
     display: flex;
 }
 
-@mixin flexMiddle {
+@mixin flexCenter {
     @include flex;
     -webkit-box-align: center;
     -moz-box-align: center;

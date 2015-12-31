@@ -7,9 +7,9 @@
 var confirm = {
     arg: function(key) {//参数
         let args = {
-            // rol: 'rol-confirm',
+            rol: 'confirm',
             group: 'confirm-group',
-            layer: 'confirm-layer',
+            time: 100
         }
         return args[key];
     },
@@ -19,41 +19,41 @@ var confirm = {
             return false;
         };
         //删除多余模块
-        $('.' + this.arg['layer']).remove();
+        $('[rol='+ this.arg('rol') +']').remove();
         //初始化view
         this.view(val, callback);
     },
     initIng: function(callback) {//初始化中，执行
-        var objConfirm,
+        var objRol,
             objGroup;
         //初始化对象
-        objConfirm = $('.' + this.arg('layer'));
-        objGroup = objConfirm.find('.' + this.arg('group'));
+        objRol = $('[rol='+ this.arg('rol') +']');
+        objGroup = objRol.find('.' + this.arg('group'));
         //初始化样式
-        objConfirm.removeClass('unactive').addClass('active');
+        objRol.removeClass('unactive').addClass('active');
         //初始化功能
-        this.cancel(objConfirm, objGroup);
-        this.confirm(objConfirm, objGroup, callback);
+        this.cancel(objRol, objGroup);
+        this.confirm(objRol, objGroup, callback);
     },
-    hide: function(objConfirm, objGroup) {//隐藏效果
+    hide: function(objRol, objGroup) {//隐藏效果
         //移动短开启滚动
         document.ontouchmove = function() {
             return true;
         };
-        objConfirm.removeClass('active').addClass('unactive');
+        objRol.removeClass('active').addClass('unactive');
         setTimeout(() => {//等待animation完成，运行
-            objConfirm.remove();
-        }, 500);
+            objRol.remove();
+        }, this.arg('time'));
 
     },
-    cancel: function(objConfirm, objGroup) {//取消操作
+    cancel: function(objRol, objGroup) {//取消操作
         objGroup.find('[rol="cancel"]').on('click', function() {
-            this.hide(objConfirm, objGroup);
+            this.hide(objRol, objGroup);
         }.bind(this));
     },
-    confirm: function(objConfirm, objGroup, callback) {//确定操作
-        objGroup.find('[rol="confirm"]').on('click', function() {
-            this.hide(objConfirm, objGroup);
+    confirm: function(objRol, objGroup, callback) {//确定操作
+        objGroup.find('[rol="confirms"]').on('click', function() {
+            this.hide(objRol, objGroup);
             if(callback) {
                 callback();
             }
@@ -61,12 +61,12 @@ var confirm = {
     },
     view: function(tx, callback) {//view初始化
         var html = '';
-        html += '<div id="confirm" class='+ this.arg('layer') +'>';
+        html += '<div class="modal" rol="confirm">';
         html +=    '<div class="confirm-group">';
         html +=        '<div class="confirm-tx">'+ tx +'</div>';
         html +=        '<div class="confirm-fun">';
         html +=            '<div class="confirm-cancel" rol="cancel">取消</div>'
-        html +=            '<div class="confirm-confirm" rol="confirm">确认</div>'
+        html +=            '<div class="confirm-confirm" rol="confirms">确认</div>'
         html +=        '</div>'
         html +=    '</div>'
         html += '</div>';

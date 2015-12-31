@@ -1,8 +1,15 @@
+/*
+
+    alert组件
+    _alert.init('确定删除吗？', fn);
+
+*/
 var alert = {
     arg: function(key) {
         let args = {
-            layer: 'alert-layer',
-            group: 'alert-group'
+            rol: 'alert',
+            group: 'alert-group',
+            time: 100
         }
         return args[key];
     },
@@ -11,34 +18,34 @@ var alert = {
             return false;
         };
         //删除多余模块
-        $('.' + this.arg['layer']).remove();
+        $('[rol='+ this.arg('rol') +']').remove();
         //初始化view
         this.view(val, callback);
     },
     initIng: function(callback) {
-        var objAlert,
+        var objRol,
             objGroup;
         //初始化对象
-        objAlert = $('.' + this.arg('layer'));
-        objGroup = objAlert.find('.' + this.arg('group'));
+        objRol = $('[rol='+ this.arg('rol') +']');
+        objGroup = objRol.find('.' + this.arg('group'));
         //初始化样式
-        objAlert.removeClass('unactive').addClass('active');
+        objRol.removeClass('unactive').addClass('active');
         //初始化功能
-        this.confirm(objAlert, objGroup, callback);
+        this.confirm(objRol, objGroup, callback);
     },
-    hide: function(objAlert, objGroup) {//隐藏效果
+    hide: function(objRol, objGroup) {//隐藏效果
         //移动短开启滚动
         document.ontouchmove = function() {
             return true;
         };
-        objAlert.removeClass('active').addClass('unactive');
+        objRol.removeClass('active').addClass('unactive');
         setTimeout(() => {//等待animation完成，运行
-            objAlert.remove();
-        }, 500);
+            objRol.remove();
+        }, this.arg('time'));
     },
-    confirm: function(objAlert, objGroup, callback) {
+    confirm: function(objRol, objGroup, callback) {
         objGroup.find('[rol="confirm"]').on('click', function() {
-            this.hide(objAlert, objGroup);
+            this.hide(objRol, objGroup);
             if(callback) {
                 callback();
             }
@@ -46,15 +53,14 @@ var alert = {
     },
     view: function(tx, callback) {
         var html = '';
-        html = '<div class="alert-layer">';
-        html = '    <div class="alert-group">';
-        html = '        <div class="alert-tx">'+ tx +'</div>';
-        html = '        <div class="alert-btn">确定</div>';
-        html = '    </div>';
-        html = '</div>';
+        html += '<div class="modal" rol="alert">';
+        html += '    <div class="alert-group">';
+        html += '        <div class="alert-tx">'+ tx +'</div>';
+        html += '        <div class="alert-btn" rol="confirm">确定</div>';
+        html += '    </div>';
+        html += '</div>';
         $('body').append(html);
         this.initIng(callback);
     }
 }
-
 module.exports = alert;

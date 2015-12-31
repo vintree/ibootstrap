@@ -1,10 +1,10 @@
 // mixin集
 @import "./mixin/ellipsis";// 省略
 @import "./mixin/margin";// 间隔
-@import "./mixin/middle";// 居中
+// @import "./mixin/middle";// 居中
 @import "./mixin/background";// 背景色
 @import "./mixin/select";// 选择
-
+@import "./mixin/flex";// 弹性布局
 // 全局基本样式
 @import "base";
 
@@ -37,6 +37,7 @@
 @import "layer";
 
 // 弹出框
-@import "hint";//父类库
-@import "alert";
-@import "confirm";
+@import "modal";//父类库
+@import "modal-alert";
+@import "modal-confirm";
+@import "modal-select";

@@ -1,10 +1,7 @@
-// 弹框样式 alert
+// 弹框样式 confirm
 
-$alert-border: 1px solid #DCDCDC;
-$alert-width: 85%;
-
-.alert-layer {
-    @include middleFlex;
+.confirm-layer {
+    @include flexCenter;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,32 +22,44 @@ $alert-width: 85%;
     }
 }
 
-.alert-group {
+.confirm-group {
     width: $hint-width;
     background-color: #ffffff;
     flex-flow: column;
     display: flex;
     text-align: center;
     border-radius: 0.3rem;
-    .alert-tx {
+    .confirm-tx {
         flex: 5;
         color: #000000;
         @include ellipsis2;
-        @include middleFlex;
+        @include flexCenter;
         padding: $base-padding * 6 $base-padding * 2;
         font-size: $base-size * 1.2;
     }
-    .alert-btn {
+    .confirm-fun {
         flex: 2;
         color: $hint-color;
         line-height: 3;
-        @include middleFlex;
+        @include flexCenter;
         @include ellipsis1;
-        border-top: $alert-border;
-        padding: 0 $base-padding;
+        border-top: $hint-border;
         font-size: $base-size * 1.3;
-        &:hover {
-            @include background-selected;
+        & > *:nth-child(1) {
+            flex: 1;
+            font-weight: bold;
+            border-right: $hint-border;
+            padding: 0 $base-padding;
+            &:hover {
+                @include background-selected;
+            }
+        }
+        & > *:nth-child(2) {
+            padding: 0 $base-padding;
+            flex: 1;
+            &:hover {
+                @include background-selected;
+            }
         }
     }
 }
