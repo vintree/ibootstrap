@@ -1,32 +1,7 @@
 // 弹框样式 alert
 
-$alert-border: 1px solid #DCDCDC;
-$alert-width: 85%;
-
-.alert-layer {
-    @include flexCenter;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    &.active {
-        display: flex;
-        animation: show 0.5s;
-        animation-fill-mode: forwards;
-    }
-    &.unactive {
-        display: flex;
-        animation: hide 0.3s;
-        animation-fill-mode: forwards;
-    }
-}
-
 .alert-group {
-    width: $hint-width;
+    width: $modal-width;
     background-color: #ffffff;
     flex-flow: column;
     display: flex;
@@ -42,37 +17,15 @@ $alert-width: 85%;
     }
     .alert-btn {
         flex: 2;
-        color: $hint-color;
+        color: $modal-color;
         line-height: 3;
         @include flexCenter;
         @include ellipsis1;
-        border-top: $alert-border;
+        border-top: $modal-border;
         padding: 0 $base-padding;
         font-size: $base-size * 1.3;
         &:hover {
             @include background-selected;
         }
-    }
-}
-
-@keyframes show {
-    0% {
-        opacity: 0;
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes hide {
-    from {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(1.2, 1.2);
     }
 }
