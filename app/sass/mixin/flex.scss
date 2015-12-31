@@ -1,0 +1,115 @@
+// 弹性布局
+
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flexMiddle {
+    @include flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;//垂直
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;//水品
+}
+
+@mixin flexRow {
+    @include flex;
+    flex-flow: row;
+}
+
+@mixin flexColumn {
+    @include flex;
+    flex-flow: column;
+}
+
+// /*
+//     排列方向 flex-direction
+// */
+// // 主轴为水平方向，起点在左端
+// @mixin flexDirection-row {
+//     flex-direction: row;
+// }
+//
+// // 主轴为水平方向，起点在右端
+// @mixin flexDirection-rowReverse {
+//     flex-direction: row-reverse;
+// }
+//
+// // 主轴为垂直方向，起点在上沿
+// @mixin flexDirection-column {
+//     flex-direction: column;
+// }
+//
+// // 主轴为垂直方向，起点在下沿
+// @mixin flexDirection-columnReverse {
+//     flex-direction: column-reverse;
+// }
+//
+// /*
+//     换行 flex-wrap
+// */
+//
+// // 不换行
+// @mixin flexWrap-nowrap {
+//     flex-wrap: nowrap;
+// }
+//
+// // 换行，第一行在上方
+// @mixin flexWrap-wrap {
+//     flex-wrap: wrap;
+// }
+//
+// // 换行，第一行在下方
+// @mixin flexWrap-wrapReverse {
+//     flex-wrap: wrap-reverse;
+// }
+//
+// /*
+//     flex-flow是flex-direction和flex-wrap的简写形式，默认值为row nowrap，既从左到右 && 不换行
+//     由于该属性继承了flex-direction、flex-wrap属性，只写出行、纵行列快捷方式
+// */
+// @mixin flexFlow-row {
+//     flex-flow: row;
+// }
+//
+// @mixin flexFlow-column {
+//     flex-flow: column;
+// }
+//
+// /*
+//     justify-content 主轴上的对齐方式
+// */
+// // 左对齐
+// @mixin flexJustify-start {
+//     justify-content: flex-start;
+// }
+//
+// // 右对齐
+// @mixin flexJustify-end {
+//     justify-content: flex-end;
+// }
+//
+// // 居中
+// @mixin flexJustify-center {
+//     justify-content: center;
+// }
+//
+// // 以两边为基准，有间隙
+// @mixin flexJustify-spaceBetween {
+//     justify-content: space-between;
+// }
+//
+// // 以主轴为基准，有间隙
+// @mixin flexJustity-spaceAround {
+//     justify-content: space-around;
+// }
