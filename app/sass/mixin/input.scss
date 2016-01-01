@@ -1,0 +1,22 @@
+/*
+    input样式
+*/
+
+@mixin input-pop-box {
+    margin: 0;
+    width: $base-size * 1.5;
+    height: $base-size * 1.5;
+    font-size: $base-size * 2;
+    margin-top: $base-padding * 3.3;
+    border: $base-border;
+    background-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    &:checked {
+        background-color: $base-blueColor;
+    }
+}
+
+// @mixin input-pop-checkbox {
+//
+// }

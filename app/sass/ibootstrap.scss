@@ -5,6 +5,7 @@
 @import "./mixin/background";// 背景色
 @import "./mixin/select";// 选择
 @import "./mixin/flex";// 弹性布局
+@import "./mixin/input";// input类型装饰
 // 全局基本样式
 @import "base";
 
@@ -15,7 +16,7 @@
 @import "color";
 
 // 按钮样式
-@import "buttons";//父类库
+@import "button";//父类库
 @import "button-groups";
 
 //  分配长度
@@ -37,7 +38,7 @@
 @import "layer";
 
 // 弹出框
-@import "modal";//父类库
-@import "modal-alert";
-@import "modal-confirm";
-@import "modal-select";
+@import "pop";//父类库
+@import "pop-alert";
+@import "pop-confirm";
+@import "pop-box";

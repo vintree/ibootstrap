@@ -1,0 +1,23 @@
+/*
+    依赖 mixin：
+    1. background-selected
+
+    弹框按钮样式
+*/
+@mixin cancel {
+    flex: 1;
+    font-weight: bold;
+    border-right: $modal-border;
+    padding: 0 $base-padding;
+    &:hover {
+        @include background-selected;
+    }
+}
+
+@mixin confirm {
+    padding: 0 $base-padding;
+    flex: 1;
+    &:hover {
+        @include background-selected;
+    }
+}

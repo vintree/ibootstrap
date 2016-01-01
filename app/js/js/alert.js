@@ -8,7 +8,8 @@ var alert = {
     arg: function(key) {
         let args = {
             rol: 'alert',
-            group: 'alert-group',
+            group: 'pop-alert',
+            yes: 'yes',
             time: 100
         }
         return args[key];
@@ -31,7 +32,7 @@ var alert = {
         //初始化样式
         objRol.removeClass('unactive').addClass('active');
         //初始化功能
-        this.confirm(objRol, objGroup, callback);
+        this.yes(objRol, objGroup, callback);
     },
     hide: function(objRol, objGroup) {//隐藏效果
         //移动短开启滚动
@@ -43,8 +44,8 @@ var alert = {
             objRol.remove();
         }, this.arg('time'));
     },
-    confirm: function(objRol, objGroup, callback) {
-        objGroup.find('[rol="confirm"]').on('click', function() {
+    yes: function(objRol, objGroup, callback) {
+        objGroup.find('[rol='+ this.arg('yes') +']').on('click', function() {
             this.hide(objRol, objGroup);
             if(callback) {
                 callback();
@@ -53,10 +54,12 @@ var alert = {
     },
     view: function(tx, callback) {
         var html = '';
-        html += '<div class="modal" rol="alert">';
-        html += '    <div class="alert-group">';
-        html += '        <div class="alert-tx">'+ tx +'</div>';
-        html += '        <div class="alert-btn" rol="confirm">确定</div>';
+        html += '<div class="pop-modal" rol="alert">';
+        html += '    <div class="pop-alert">';
+        html += '        <div class="pop-body">'+ tx +'</div>';
+        html += '        <div class="pop-foot">';
+        html += '           <div rol='+ this.arg('yes') +'>确定</div>';
+        html += '        </div>';
         html += '    </div>';
         html += '</div>';
         $('body').append(html);

@@ -1,0 +1,17 @@
+// 弹框样式 confirm
+
+.pop-confirm {
+    width: $modal-width;
+    background-color: #ffffff;
+    flex-flow: column;
+    display: flex;
+    text-align: center;
+    border-radius: 0.3rem;
+    .pop-body {
+        color: #000000;
+        @include ellipsis2;
+        @include flexCenter;
+        padding: $base-padding * 5 $base-padding * 2;
+        font-size: $base-size * 1.2;
+    }
+}

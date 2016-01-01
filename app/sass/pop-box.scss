@@ -1,0 +1,55 @@
+// 弹出选择模块
+
+.pop-box {
+    width: $modal-width;
+    background-color: #ffffff;
+    flex-flow: column;
+    display: flex;
+    text-align: center;
+    border-radius: 0.3rem;
+    .pop-head {
+        color: $modal-color;
+        line-height: 3;
+        @include ellipsis1;
+        border-bottom: $modal-border;
+        text-align: left;
+        font-size: $base-size;
+        padding: 0 $base-padding * 2;
+        @include flexCenter;
+    }
+    .pop-body {
+        color: #000000;
+        @include ellipsis2;
+        padding: $base-padding * 5 $base-padding * 2;
+        font-size: $base-size * 1.2;
+        text-align: left;
+        .pop-box-group {
+            position: relative;
+            display: block;
+            &:last-child {
+                .pop-box-tx {
+                    border-bottom: 0;
+                }
+            }
+            label {
+                position: relative;
+                @include flexRow;
+                input[type=checkbox] {
+                    @include input-pop-box;
+                }
+                input[type=radio] {
+                    border-radius: 100%;
+                    @include input-pop-box;
+                }
+                .pop-box-tx {
+                    flex: 12;
+                    font-size: $base-size * 1.2;
+                    color: $base-blueColor;
+                    border-bottom: $base-border;
+                    padding: $base-padding * 3 0;
+                    margin-left: $base-padding * 2;
+                }
+            }
+        }
+    }
+}

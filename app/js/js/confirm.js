@@ -8,7 +8,9 @@ var confirm = {
     arg: function(key) {//参数
         let args = {
             rol: 'confirm',
-            group: 'confirm-group',
+            group: 'pop-confirm',
+            no: 'no',
+            yes: 'yes',
             time: 100
         }
         return args[key];
@@ -32,8 +34,8 @@ var confirm = {
         //初始化样式
         objRol.removeClass('unactive').addClass('active');
         //初始化功能
-        this.cancel(objRol, objGroup);
-        this.confirm(objRol, objGroup, callback);
+        this.no(objRol, objGroup);
+        this.yes(objRol, objGroup, callback);
     },
     hide: function(objRol, objGroup) {//隐藏效果
         //移动短开启滚动
@@ -46,13 +48,13 @@ var confirm = {
         }, this.arg('time'));
 
     },
-    cancel: function(objRol, objGroup) {//取消操作
-        objGroup.find('[rol="cancel"]').on('click', function() {
+    no: function(objRol, objGroup) {//取消操作
+        objGroup.find('[rol='+ this.arg('no') +']').on('click', function() {
             this.hide(objRol, objGroup);
         }.bind(this));
     },
-    confirm: function(objRol, objGroup, callback) {//确定操作
-        objGroup.find('[rol="confirms"]').on('click', function() {
+    yes: function(objRol, objGroup, callback) {//确定操作
+        objGroup.find('[rol='+ this.arg('yes') +']').on('click', function() {
             this.hide(objRol, objGroup);
             if(callback) {
                 callback();
@@ -61,12 +63,12 @@ var confirm = {
     },
     view: function(tx, callback) {//view初始化
         var html = '';
-        html += '<div class="modal" rol="confirm">';
-        html +=    '<div class="confirm-group">';
-        html +=        '<div class="confirm-tx">'+ tx +'</div>';
-        html +=        '<div class="confirm-fun">';
-        html +=            '<div class="confirm-cancel" rol="cancel">取消</div>'
-        html +=            '<div class="confirm-confirm" rol="confirms">确认</div>'
+        html += '<div class="pop-modal" rol="confirm">';
+        html +=    '<div class="pop-confirm">';
+        html +=        '<div class="pop-body">'+ tx +'</div>';
+        html +=        '<div class="pop-foot">';
+        html +=            '<div rol='+ this.arg('no') +'>取消</div>'
+        html +=            '<div rol='+ this.arg('yes') +'>确定</div>'
         html +=        '</div>'
         html +=    '</div>'
         html += '</div>';

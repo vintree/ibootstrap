@@ -77,7 +77,7 @@ div, div[contentEditable], input, textarea, button, a:link {
 
 // 如何去掉textarea,input的默认样式（IOS上的圆角及内阴影等）
 input,textarea{
-    -webkit-appearance:none;
+    // -webkit-appearance:none;
 }
 
 // number默认样式
