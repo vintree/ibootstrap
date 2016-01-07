@@ -12,21 +12,20 @@
         <div class="loading-rotundity"></div>
     </div>
 
-    <div class="pop-modal" rol="checked">
+    <!-- <div class="pop-modal" rol="checked">
         <div class="pop-box">
             <form>
                 <div class="pop-head">充值会员选项</div>
                 <div class="pop-body">
                     <div class="pop-box-group">
                         <label>
-                            <input type="radio" value="">
+                            <input type="radio" value="" name="optionsRadios">
                             <span class="pop-box-tx">1天会员 / 1元</span>
                         </label>
                     </div>
-
                     <div class="pop-box-group">
                         <label>
-                            <input type="radio" value="">
+                            <input type="radio" value="" name="optionsRadios">
                             <span class="pop-box-tx">30天会员 / 18元</span>
                         </label>
                     </div>
@@ -37,7 +36,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -71,17 +70,28 @@
         </div>
     </div> -->
 
-    <!-- <div class="pop-modal" rol="alert">
+    <div class="pop-modal" rol="alert">
         <div class="pop-alert">
             <div class="pop-body">数据库更新错误！</div>
             <div class="pop-foot">
                 <div rol='yes'>确定</div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
-    <div class="form-group">
+    <div id="content">
+        <!-- <button class="btn btn-default btn-radius" data-targetTips="#tipsDanger" role="alert" data-target="#myModal">(默认样式)「alert」</button> -->
+        <button class="btn btn-default btn-radius" role="alert" data-target="#myModal">(默认样式)「alert」</button>
+        <button class="btn btn-primary btn-unradius" role="confirm" data-target="#myModal">(首选项) Primary「confirm」</button>
+        <button class="btn btn-success">(成功) Success</button>
+        <button class="btn btn-info">(一般信息) Info</button>
+        <button class="btn btn-warning">(警告) Warning</button>
+        <button class="btn btn-danger">(警告) Danger</button>
+    </div>
+
+
+    <!-- <div class="form-group">
         <div class="inp-group">
             <input type="search" placeholder="邮箱、手机号">
         </div>
@@ -92,9 +102,9 @@
         <div class="inp-group">
             <input type="password" placeholder="输入密码">
         </div>
-    </div>
+    </div> -->
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <div class="inp-group">
             <label>账号:</label>
             <input type="search" placeholder="邮箱、手机号">
@@ -108,18 +118,11 @@
             <label>密码:</label>
             <input type="password" placeholder="输入密码">
         </div>
-    </div>
+    </div> -->
 
-    <div id="content">
-        <button class="btn btn-default btn-radius" data-targetTips="#tipsDanger">(默认样式)</button>
-        <button class="btn btn-primary btn-unradius" rol-confirm="#confirm">(首选项) Primary</button>
-        <button class="btn btn-success">(成功) Success</button>
-        <button class="btn btn-info">(一般信息) Info</button>
-        <button class="btn btn-warning">(警告) Warning</button>
-        <button class="btn btn-danger">(警告) Danger</button>
-    </div>
 
-    <div class="btn-group">
+
+    <div class="btn-group btn-inline">
         <button class="btn btn-default btn-radius">(默认样式)</button>
         <button class="btn btn-primary">(首选项) Primary</button>
         <button class="btn btn-success">(成功) Success</button>

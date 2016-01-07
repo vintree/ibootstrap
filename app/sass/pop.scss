@@ -61,11 +61,11 @@ $modal-color: #1E90ff;
 }
 
 @keyframes hide {
-    from {
+    0% {
         opacity: 1;
         transform: scale(1, 1);
     }
-    to {
+    100% {
         opacity: 0;
         transform: scale(1.2, 1.2);
     }

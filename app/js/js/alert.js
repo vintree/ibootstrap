@@ -14,6 +14,10 @@ var alert = {
         }
         return args[key];
     },
+    target: function() {
+        var node = $('[role=alert]');
+        
+    },
     init: function(val, callback) {
         document.ontouchmove = function() {
             return false;
@@ -66,4 +70,5 @@ var alert = {
         this.initIng(callback);
     }
 }
+
 module.exports = alert;

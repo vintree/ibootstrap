@@ -3,7 +3,10 @@
 */
 .btn-group {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+    &.btn-inline {
+        flex-flow: row;
+    }
     .btn {
         flex: 1;
         margin: .1rem;
