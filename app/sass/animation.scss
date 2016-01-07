@@ -41,3 +41,25 @@
         transform: translateY(- $base-height);
     }
 }
+
+@keyframes view-bottom-fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes view-bottom-fade {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+}

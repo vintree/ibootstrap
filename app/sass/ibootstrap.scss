@@ -7,7 +7,6 @@
 @import "./mixin/flex";// 弹性布局
 @import "./mixin/input";// input类型装饰
 
-
 // 全局变量
 @import "var";
 
@@ -47,6 +46,9 @@
 
 // 弹出框
 @import "pop";//父类库
-@import "pop-alert";
-@import "pop-confirm";
-@import "pop-box";
+@import "pop-alert";// 提醒弹框
+@import "pop-confirm";// 确认弹框
+@import "pop-box";// 单选、复选弹框
+
+// 视口
+@import "view-reveal";

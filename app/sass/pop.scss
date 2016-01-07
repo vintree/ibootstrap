@@ -16,12 +16,12 @@ $modal-color: #1E90ff;
         // display: none;
         &.fadeIn {
             display: flex;
-            animation: pop-fadeIn 0.5s;
+            animation: pop-fadeIn .5s;
             animation-fill-mode: forwards;
         }
         &.fade {
             display: flex;
-            animation: pop-fade 0.3s;
+            animation: pop-fade .3s;
             animation-fill-mode: forwards;
         }
         .pop-foot {
@@ -50,8 +50,4 @@ $modal-color: #1E90ff;
             }
         }
     }
-}
-
-.pop-bottom-top {
-    
 }

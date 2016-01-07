@@ -1,0 +1,46 @@
+.view-reveal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: .3rem .3rem 0 0;
+    height: 10rem;
+    transform: translateY(10rem);
+    .view-head {
+        display: flex;
+        flex-flow: row;
+        width: 98%;
+        margin: auto;
+        text-align: center;
+        line-height: $base-height * 1.1;
+        border-bottom: $base-border;
+        .view-tit {
+            flex: 3;
+            @include ellipsis1;
+            padding: 0 $base-padding;
+            font-size: $base-size * 1.2;
+        }
+        [role~=dismiss] {
+            flex: 1;
+            font-weight: bold;
+            padding: 0 $base-padding 0 0;
+            color: $modal-color;
+            font-size: $base-size * 1.4;
+        }
+        [role~=confirm] {
+            flex: 1;
+            padding: 0 0 0 $base-padding;
+            color: $modal-color;
+            font-size: $base-size * 1.4;
+        }
+    }
+    &.fadeIn {
+        animation: view-bottom-fadeIn .5s;
+        animation-fill-mode: forwards;
+    }
+    &.fade {
+        animation: view-bottom-fade .3s;
+        animation-fill-mode: forwards;
+    }
+}
