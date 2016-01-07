@@ -45,3 +45,50 @@ $border: 1px solid #ccc;
         }
     }
 }
+
+.checkbox-inline {
+    @include flexRow
+    text-align: center;
+}
+
+.checkbox-block {
+    @include flexColumn;
+}
+
+.checkbox-label {
+    flex: 1;
+}
+
+[type=checkbox] {
+    @include input-typeCheckBox;
+}
+
+.checkbox-describe {
+    display: inline-block;
+    position: relative;
+    top: -.1rem;
+}
+
+.radio-inline {
+    @include flexRow
+    text-align: center;
+}
+
+.radio-block {
+    @include flexColumn;
+}
+
+.radio-label {
+    flex: 1;
+}
+
+[type=radio] {
+    border-radius: 100%;
+    @include input-typeCheckBox;
+}
+
+.radio-describe {
+    display: inline-block;
+    position: relative;
+    top: -.1rem;
+}
