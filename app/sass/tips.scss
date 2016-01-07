@@ -5,21 +5,23 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
 .tips {
     line-height: $base-height;
-    opacity: 0;
+    // display: none;
     text-align: center;
     &.tips-top-group {
         position: fixed;
         top: 0;
-        left:0;
+        left: 0;
         width: 100%;
         font-size: $base-size;
+        transform: translateY(- $base-height);
     }
     &.fade {
-        animation: 1s fade;
-        &.in {
-            animation: 1s fadeIn;
-            // transform: translate(0, $base-height, 0);
-        }
+        animation: 0.5s fade;
+        animation-fill-mode: forwards;
+    }
+    &.fadeIn {
+        animation: 0.3s fadeIn;
+        animation-fill-mode: forwards;
     }
 
     &.tips-primary {
@@ -42,8 +44,7 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
         background-color: $base-dangerColor;
         color: #fff;
     }
-
-    .tips-close {
+    [role~=cancel] {
         position: absolute;
         top: 0;
         right: 0;
@@ -58,17 +59,18 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 @keyframes fadeIn {
     0% {
         opacity: 0;
+        transform: translateY(- $base-height);
     }
     100% {
         opacity: 1;
-        transform: translateY($base-height);
+        transform: translateY(0);
     }
 }
 
 @keyframes fade {
     0% {
         opacity: 1;
-        transform: translateY($base-height);
+        transform: translateY(0);
     }
     100% {
         opacity: 0;

@@ -16,10 +16,10 @@
 
     <div id="tips-top" class="tips tips-top-group tips-primary">
         <div class="tips-describe">dasadada</div>
-        <div class="tips-close"><i class="fa fa-close"></i></div>
+        <div class="tips-cancel" role="cancel" data-dismiss=".tips" ><i class="fa fa-close"></i></div>
     </div>
 
-    <div id="selectRadio" class="pop pop-modal" rol="checked">
+    <div id="selectRadio" class="pop pop-modal">
         <div class="pop-box">
             <form>
                 <div class="pop-head">充值会员选项</div>
@@ -38,8 +38,8 @@
                     </div>
                 </div>
                 <div class="pop-foot">
-                    <div rol='cancel' data-dismiss=".pop">取消</div>
-                    <div rol='confirm'>确认</div>
+                    <div role='dismiss' data-dismiss=".pop">取消</div>
+                    <div role='confirm'>确认</div>
                 </div>
             </form>
         </div>
@@ -47,7 +47,7 @@
 
 
 
-    <div id="selectCheckbox" class="pop pop-modal" rol="checked">
+    <div id="selectCheckbox" class="pop pop-modal" role="checked">
         <div class="pop-box">
             <form>
                 <div class="pop-head">配送条件</div>
@@ -78,8 +78,8 @@
                     </div>
                 </div>
                 <div class="pop-foot">
-                    <div rol='cancel' data-dismiss=".pop">取消</div>
-                    <div rol='confirm'>确认</div>
+                    <div role='dismiss' data-dismiss=".pop">取消</div>
+                    <div role='confirm'>确认</div>
                 </div>
             </form>
         </div>
@@ -89,8 +89,8 @@
         <div class="pop-confirm">
             <div class="pop-body">数据库更新错误！</div>
             <div class="pop-foot">
-                <div rol='cancel' data-dismiss=".pop">取消</div>
-                <div rol='confirm'>确定</div>
+                <div role='dismiss' data-dismiss=".pop">取消</div>
+                <div role='confirm'>确定</div>
             </div>
         </div>
     </div>
@@ -99,18 +99,18 @@
         <div class="pop-alert">
             <div class="pop-body">数据库更新错误！</div>
             <div class="pop-foot">
-                <div rol='confirm' data-dismiss=".pop">确定</div>
+                <div role='confirm' data-dismiss=".pop">确定</div>
             </div>
         </div>
     </div>
 
     <div id="content">
-        <!-- <button class="btn btn-default btn-radius" data-targetTips="#tipsDanger" role="alert" data-target="#myModal">(默认样式)「alert」</button> -->
+        <!-- <button class="btn btn-default btn-radius" data-targetTips="#tipsDanger" rolee="alert" data-target="#myModal">(默认样式)「alert」</button> -->
         <button class="btn btn-default btn-radius" data-target="#alert">(默认样式)「alert」</button>
         <button class="btn btn-primary btn-unradius" data-target="#confirm">(首选项) Primary「confirm」</button>
         <button class="btn btn-success" data-target="#selectCheckbox">(成功) Success「多选」</button>
-        <button class="btn btn-info" data-target="#selectRadio" >(一般信息) Info 「单选」</button>
-        <button class="btn btn-warning" data-target="#tips-top">(警告) Warning</button>
+        <button class="btn btn-info" data-target="#selectRadio">(一般信息) Info 「单选」</button>
+        <button class="btn btn-warning" data-target="#tips-top">(警告) Warning 「tips-top」</button>
         <button class="btn btn-danger">(警告) Danger</button>
     </div>
 

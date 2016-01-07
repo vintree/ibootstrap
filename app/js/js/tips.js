@@ -1,20 +1,23 @@
 var tips = {
     init: function() {
-        $('.tips-close').on('click', function() {
-            var pobj = $(this).parents('.tips-top-group');
-            if(!pobj.hasClass('.fade')) {
-                pobj.addClass('fade');
+        var node;
+        $('[data-target]').on('click', function() {
+            node = $($(this).data('target'));
+            if(node.hasClass('tips')) {
+                node.addClass('fadeIn');
             }
-            $(this).parents('.tips-top-group').removeClass('active');
         });
-
-        $('[data-targetTips]').on('click', function() {
-            var target = $(this).attr('data-targetTips');
-            var obj = $(target);
-            if(!obj.hasClass('.fade')) {
-                obj.addClass('fade');
-            }
-            obj.addClass('active');
+        this.dismiss();
+    },
+    dismiss: function() {
+        var node;
+        $('[data-dismiss]').on('click', function() {
+            node = $(this).parents($(this).data('dismiss'));
+            node.addClass('fade').removeClass('fadeIn');
+            // node.removeClass('fadeIn').addClass('fade');
+            setTimeout(function() {
+                node.removeClass('fade');
+            }, 300);
         });
     }
 }
