@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../font/css/font-awesome.min.css">
 </head>
 <body style="padding: 10px;">
     <header id="header"></header>
@@ -12,7 +13,13 @@
         <div class="loading-rotundity"></div>
     </div>
 
-    <!-- <div class="pop-modal" rol="checked">
+
+    <div id="tips-top" class="tips tips-top-group tips-primary">
+        <div class="tips-describe">dasadada</div>
+        <div class="tips-close"><i class="fa fa-close"></i></div>
+    </div>
+
+    <div id="selectRadio" class="pop pop-modal" rol="checked">
         <div class="pop-box">
             <form>
                 <div class="pop-head">充值会员选项</div>
@@ -31,62 +38,79 @@
                     </div>
                 </div>
                 <div class="pop-foot">
-                    <div rol='no'>取消</div>
-                    <div rol='yes'>确认</div>
+                    <div rol='cancel' data-dismiss=".pop">取消</div>
+                    <div rol='confirm'>确认</div>
                 </div>
             </form>
-        </div>
-    </div> -->
-
-
-
-    <!-- <div class="pop-modal" rol="checked">
-        <div class="pop-box">
-            <form>
-                <div class="pop-head">充值会员选项</div>
-                <div class="pop-body">
-                    <div class="pop-box-group">
-                        <label>
-                            <input type="checkbox" value="">
-                            <span class="pop-box-tx">1天会员 / 1元</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="pop-foot">
-                    <div rol='no'>取消</div>
-                    <div rol='yes'>确认</div>
-                </div>
-            </form>
-        </div>
-    </div> -->
-
-    <!-- <div class="pop-modal" rol="confirm">
-        <div class="pop-confirm">
-            <div class="pop-body">数据库更新错误！</div>
-            <div class="pop-foot">
-                <div rol='no'>取消</div>
-                <div rol='yes'>确定</div>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="pop-modal" rol="alert">
-        <div class="pop-alert">
-            <div class="pop-body">数据库更新错误！</div>
-            <div class="pop-foot">
-                <div rol='yes'>确定</div>
-            </div>
         </div>
     </div>
 
 
+
+    <div id="selectCheckbox" class="pop pop-modal" rol="checked">
+        <div class="pop-box">
+            <form>
+                <div class="pop-head">配送条件</div>
+                <div class="pop-body">
+                    <div class="pop-box-group">
+                        <label>
+                            <input type="checkbox" value="">
+                            <span class="pop-box-tx">周一至周五均可配送</span>
+                        </label>
+                    </div>
+                    <div class="pop-box-group">
+                        <label>
+                            <input type="checkbox" value="">
+                            <span class="pop-box-tx">周六周日均可配送</span>
+                        </label>
+                    </div>
+                    <div class="pop-box-group">
+                        <label>
+                            <input type="checkbox" value="">
+                            <span class="pop-box-tx">配送前电话确认</span>
+                        </label>
+                    </div>
+                    <div class="pop-box-group">
+                        <label>
+                            <input type="checkbox" value="">
+                            <span class="pop-box-tx">配送时附带发票</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="pop-foot">
+                    <div rol='cancel' data-dismiss=".pop">取消</div>
+                    <div rol='confirm'>确认</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirm" class="pop pop-modal">
+        <div class="pop-confirm">
+            <div class="pop-body">数据库更新错误！</div>
+            <div class="pop-foot">
+                <div rol='cancel' data-dismiss=".pop">取消</div>
+                <div rol='confirm'>确定</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="alert" class="pop pop-modal">
+        <div class="pop-alert">
+            <div class="pop-body">数据库更新错误！</div>
+            <div class="pop-foot">
+                <div rol='confirm' data-dismiss=".pop">确定</div>
+            </div>
+        </div>
+    </div>
+
     <div id="content">
         <!-- <button class="btn btn-default btn-radius" data-targetTips="#tipsDanger" role="alert" data-target="#myModal">(默认样式)「alert」</button> -->
-        <button class="btn btn-default btn-radius" role="alert" data-target="#myModal">(默认样式)「alert」</button>
-        <button class="btn btn-primary btn-unradius" role="confirm" data-target="#myModal">(首选项) Primary「confirm」</button>
-        <button class="btn btn-success">(成功) Success</button>
-        <button class="btn btn-info">(一般信息) Info</button>
-        <button class="btn btn-warning">(警告) Warning</button>
+        <button class="btn btn-default btn-radius" data-target="#alert">(默认样式)「alert」</button>
+        <button class="btn btn-primary btn-unradius" data-target="#confirm">(首选项) Primary「confirm」</button>
+        <button class="btn btn-success" data-target="#selectCheckbox">(成功) Success「多选」</button>
+        <button class="btn btn-info" data-target="#selectRadio" >(一般信息) Info 「单选」</button>
+        <button class="btn btn-warning" data-target="#tips-top">(警告) Warning</button>
         <button class="btn btn-danger">(警告) Danger</button>
     </div>
 

@@ -23,7 +23,4 @@ Head.init(headData);
 
 console.log($);
 
-
-
-
 ReactDOM.render(<Header name="Nate" />, document.getElementById('result_starTopUnit'));

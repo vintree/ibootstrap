@@ -3,44 +3,46 @@
 // $tips-height: 0.8rem;
 $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
-.tips-top-group {
-    position: fixed;
-    // top: -100px;
-    top: -$base-height;
-    left:0;
-    width: 100%;
-    height: $base-height;
-    font-size: $base-size;
+.tips {
+    line-height: $base-height;
+    opacity: 0;
     text-align: center;
+    &.tips-top-group {
+        position: fixed;
+        top: 0;
+        left:0;
+        width: 100%;
+        font-size: $base-size;
+    }
     &.fade {
-        transition: 0.5s $tips-ease-back;
+        animation: 1s fade;
+        &.in {
+            animation: 1s fadeIn;
+            // transform: translate(0, $base-height, 0);
+        }
     }
-    &.active {
-        transform: translate(0, $base-height, 0);
-    }
-    .tips {
-        line-height: $base-height;
-    }
-    .tips-primary {
+
+    &.tips-primary {
         background-color: $base-primaryColor;
         color: #fff;
     }
-    .tips-success {
+    &.tips-success {
         background-color: $base-successColor;
         color: #fff;
     }
-    .tips-info {
+    &.tips-info {
         background-color: $base-infoColor;
         color: #fff;
     }
-    .tips-warning {
+    &.tips-warning {
         background-color: $base-warningColor;
         color: #fff;
     }
-    .tips-danger {
+    &.tips-danger {
         background-color: $base-dangerColor;
         color: #fff;
     }
+
     .tips-close {
         position: absolute;
         top: 0;
@@ -50,5 +52,26 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
         line-height: $base-height;
         text-align: center;
         color: #fff;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY($base-height);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: translateY($base-height);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(- $base-height);
     }
 }

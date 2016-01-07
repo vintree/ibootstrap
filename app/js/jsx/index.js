@@ -11,9 +11,12 @@ import Head from '../temp/head.js';
 import Tips from "../js/tips.js";
 import Alert from "../js/alert.js";
 import Confirm from "../js/confirm.js";
+import Popup from "../js/popup.js";
+
 
 autoFont.init();
 
+Popup.init();
 
 Tips.init();
 window._alert = Alert;
