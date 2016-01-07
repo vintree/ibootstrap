@@ -1,11 +1,8 @@
 // 提示信息
-// $tips-size: 0.2rem;
-// $tips-height: 0.8rem;
 $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
 .tips {
     line-height: $base-height;
-    // display: none;
     text-align: center;
     &.tips-top-group {
         position: fixed;
@@ -16,14 +13,13 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
         transform: translateY(- $base-height);
     }
     &.fade {
-        animation: 0.5s fade;
+        animation: 0.3s tips-top-fade;
         animation-fill-mode: forwards;
     }
     &.fadeIn {
-        animation: 0.3s fadeIn;
+        animation: 0.5s tips-top-fadeIn;
         animation-fill-mode: forwards;
     }
-
     &.tips-primary {
         background-color: $base-primaryColor;
         color: #fff;
@@ -53,27 +49,5 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
         line-height: $base-height;
         text-align: center;
         color: #fff;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(- $base-height);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(- $base-height);
     }
 }

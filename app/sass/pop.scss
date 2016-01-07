@@ -16,12 +16,12 @@ $modal-color: #1E90ff;
         // display: none;
         &.fadeIn {
             display: flex;
-            animation: show 0.5s;
+            animation: pop-fadeIn 0.5s;
             animation-fill-mode: forwards;
         }
         &.fade {
             display: flex;
-            animation: hide 0.3s;
+            animation: pop-fade 0.3s;
             animation-fill-mode: forwards;
         }
         .pop-foot {
@@ -49,29 +49,5 @@ $modal-color: #1E90ff;
                 }
             }
         }
-    }
-}
-
-
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.2, 1.2);
     }
 }

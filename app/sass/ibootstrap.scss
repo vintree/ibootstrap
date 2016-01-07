@@ -6,8 +6,16 @@
 @import "./mixin/select";// 选择
 @import "./mixin/flex";// 弹性布局
 @import "./mixin/input";// input类型装饰
+
+
+// 全局变量
+@import "var";
+
 // 全局基本样式
 @import "base";
+
+// 动画
+@import "animation";
 
 // 默认独立样式
 @import "default";

@@ -1,0 +1,43 @@
+@keyframes pop-fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes pop-fade {
+    0% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@keyframes tips-top-fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(- $base-height);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tips-top-fade {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(- $base-height);
+    }
+}
