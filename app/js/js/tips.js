@@ -1,3 +1,7 @@
+/*
+    提示
+*/
+
 var tips = {
     init: function() {
         var node;

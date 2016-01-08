@@ -12,13 +12,14 @@ import Tips from "../js/tips.js";
 import Alert from "../js/alert.js";
 import Confirm from "../js/confirm.js";
 import Popup from "../js/popup.js";
-import View from "../js/view.js";
+import ViewvReveal from "../js/view-reveal.js";
+import Popover from "../js/popover.js";
 
 autoFont.init();
 
 Popup.init();
-View.init();
-
+ViewvReveal.init();
+Popover.init();
 
 Tips.init();
 window._alert = Alert;

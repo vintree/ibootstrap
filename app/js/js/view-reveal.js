@@ -1,5 +1,6 @@
-import Events from "./util/events.js";
-
+/*
+    视口
+*/
 var view = {
     init: function() {
         var node;

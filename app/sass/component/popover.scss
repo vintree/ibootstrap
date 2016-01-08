@@ -1,0 +1,28 @@
+/*
+    长按呼出菜单
+*/
+
+.popover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    .popover-group {
+        overflow: hidden;
+        background-color: #000000;
+        border-radius: 0.1rem;
+        padding: $base-padding 0;
+        .popover-unit {
+            float: left;
+            width: $base-height * 1.3;
+            height: $base-height * 0.8;
+            line-height: $base-height * 0.8;
+            color: #ffffff;
+            text-align: center;
+            border-right: $base-border;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
