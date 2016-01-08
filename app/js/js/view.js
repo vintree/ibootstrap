@@ -6,12 +6,11 @@ var view = {
         $('[data-target]').on('click', function() {
             node = $($(this).data('target'));
             if(node.hasClass('view')) {
-                Events.untouchmove();
+                $('html, body').addClass('ofHidden');
                 node.addClass('fadeIn').removeClass('fade');
                 setTimeout(function() {
                     node.find('.views').addClass('fadeIn').removeClass('fade');
-                });
-
+                }, 100);
             }
         });
         this.dismiss();
@@ -19,7 +18,7 @@ var view = {
     dismiss: function() {
         var node;
         $('[data-closeView]').on('click', function() {
-            Events.touchmove();
+            $('html, body').removeClass('ofHidden');
             node = $(this).parents($(this).data('closeView'));
             if(node.hasClass('view')) {
                 node.find('.views').addClass('fade').removeClass('fadeIn');
