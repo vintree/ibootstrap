@@ -1,46 +1,73 @@
-.view-reveal {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: .3rem .3rem 0 0;
-    height: 10rem;
-    transform: translateY(10rem);
-    .view-head {
-        display: flex;
-        flex-flow: row;
-        width: 98%;
-        margin: auto;
-        text-align: center;
-        line-height: $base-height * 1.1;
-        border-bottom: $base-border;
-        .view-tit {
-            flex: 3;
-            @include ellipsis1;
-            padding: 0 $base-padding;
-            font-size: $base-size * 1.2;
+.view {
+    display: none;
+    &.view-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: rgba(0,0,0,0.5);
+        &.fadeIn {
+            display: block;
+            animation: pop-fadeIn .1s;
+            animation-fill-mode: forwards;
         }
-        [role~=dismiss] {
-            flex: 1;
-            font-weight: bold;
-            padding: 0 $base-padding 0 0;
-            color: $modal-color;
-            font-size: $base-size * 1.4;
+        &.fade {
+            display: block;
+            animation: pop-fade .3s;
+            animation-fill-mode: forwards;
         }
-        [role~=confirm] {
-            flex: 1;
-            padding: 0 0 0 $base-padding;
-            color: $modal-color;
-            font-size: $base-size * 1.4;
+    }
+    [role~=dismiss] {
+        flex: 1;
+        font-weight: bold;
+        padding: 0 $base-padding 0 0;
+        color: $modal-color;
+        font-size: $base-size * 1.4;
+    }
+    [role~=confirm] {
+        flex: 1;
+        padding: 0 0 0 $base-padding;
+        color: $modal-color;
+        font-size: $base-size * 1.4;
+    }
+}
+
+.views {
+    display: none;
+    &.view-reveal {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: .3rem .3rem 0 0;
+        height: 10rem;
+        .view-head {
+            display: flex;
+            flex-flow: row;
+            width: 98%;
+            margin: auto;
+            text-align: center;
+            line-height: $base-height * 1.1;
+            border-bottom: $base-border;
+            .view-tit {
+                flex: 3;
+                @include ellipsis1;
+                padding: 0 $base-padding;
+                font-size: $base-size * 1.2;
+            }
         }
     }
     &.fadeIn {
-        animation: view-bottom-fadeIn .5s;
+        display: block;
+        animation: view-bottom-fadeIn .3s;
         animation-fill-mode: forwards;
     }
     &.fade {
-        animation: view-bottom-fade .3s;
+        display: block;
+        animation: view-bottom-fade .2s;
         animation-fill-mode: forwards;
     }
 }

@@ -18,9 +18,9 @@ var popup = {
     },
     dismiss: function() {
         var node;
-        $('[data-dismiss]').on('click', function() {
+        $('[data-closePop]').on('click', function() {
             Events.touchmove();
-            node = $(this).parents($(this).data('dismiss'));
+            node = $(this).parents($(this).data('closePop'));
             if(node.hasClass('pop')) {
                 node.addClass('fade').removeClass('fadeIn');
                 setTimeout(function() {

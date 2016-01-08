@@ -11,8 +11,8 @@ var tips = {
     },
     dismiss: function() {
         var node;
-        $('[data-dismiss]').on('click', function() {
-            node = $(this).parents($(this).data('dismiss'));
+        $('[data-closeTips]').on('click', function() {
+            node = $(this).parents($(this).data('closeTips'));
             node.addClass('fade').removeClass('fadeIn');
             // node.removeClass('fadeIn').addClass('fade');
             setTimeout(function() {

@@ -76,7 +76,7 @@
 
     <div id="tips-top" class="tips tips-top-group tips-primary">
         <div class="tips-describe">dasadada</div>
-        <div class="tips-cancel" role="cancel" data-dismiss=".tips" ><i class="fa fa-close"></i></div>
+        <div class="tips-cancel" role="cancel" data-closeTips=".tips" ><i class="fa fa-close"></i></div>
     </div>
 
     <div id="selectRadio" class="pop pop-modal">
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="pop-foot">
-                    <div role='dismiss' data-dismiss=".pop">取消</div>
+                    <div role='dismiss' data-closePop=".pop">取消</div>
                     <div role='confirm'>确认</div>
                 </div>
             </form>
@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="pop-foot">
-                    <div role='dismiss' data-dismiss=".pop">取消</div>
+                    <div role='dismiss' data-closePop=".pop">取消</div>
                     <div role='confirm'>确认</div>
                 </div>
             </form>
@@ -149,7 +149,7 @@
         <div class="pop-confirm">
             <div class="pop-body">数据库更新错误！</div>
             <div class="pop-foot">
-                <div role='dismiss' data-dismiss=".pop">取消</div>
+                <div role='dismiss' data-closePop=".pop">取消</div>
                 <div role='confirm'>确定</div>
             </div>
         </div>
@@ -159,16 +159,16 @@
         <div class="pop-alert">
             <div class="pop-body">数据库更新错误！</div>
             <div class="pop-foot">
-                <div role='confirm' data-dismiss=".pop">确定</div>
+                <div role='confirm' data-closePop=".pop">确定</div>
             </div>
         </div>
     </div>
 
 
-    <div class="pop pop-modal" style="display: block">
-        <div class="view-reveal">
+    <div id="view" class="view view-modal">
+        <div class="views view-reveal">
             <div class="view-head">
-                <div role='dismiss'>取消</div>
+                <div role='dismiss' data-closeView=".view">取消</div>
                 <div class="view-tit">基围虾详情</div>
                 <div role='confirm'>确认</div>
             </div>
@@ -185,7 +185,7 @@
         <button class="btn btn-success" data-target="#selectCheckbox">(成功) Success「多选」</button>
         <button class="btn btn-info" data-target="#selectRadio">(一般信息) Info 「单选」</button>
         <button class="btn btn-warning" data-target="#tips-top">(警告) Warning 「tips-top」</button>
-        <button class="btn btn-danger">(警告) Danger</button>
+        <button class="btn btn-danger" data-target="#view">(警告) Danger 「view」</button>
     </div>
 
 
