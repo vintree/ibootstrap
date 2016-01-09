@@ -8,9 +8,7 @@ $(function() {
     $('#alertCB').on('click', function(e) {
         // alert('dasd');
 
-        $($(this).data('modalpop')).modal('show');
-
-        
+        $($(this).data('modalpop')).modalPop('hide');
 
     })
 });
