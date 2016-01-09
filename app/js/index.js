@@ -56,9 +56,13 @@ webpackJsonp([0,1],[
 
 	var _popover2 = _interopRequireDefault(_popover);
 
+	var _modal = __webpack_require__(173);
+
+	var _modal2 = _interopRequireDefault(_modal);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(173);
+	__webpack_require__(174);
 
 	// ibootstrap 相关组件
 
@@ -67,8 +71,10 @@ webpackJsonp([0,1],[
 	_popup2.default.init();
 	_viewReveal2.default.init();
 	_popover2.default.init();
-
 	_tips2.default.init();
+
+	_modal2.default.init();
+
 	window._alert = _alert2.default;
 	window._confirm = _confirm2.default;
 
@@ -29941,15 +29947,33 @@ webpackJsonp([0,1],[
 
 /***/ },
 /* 173 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var modal = {
+	    init: function init() {
+	        $.fn.extend({
+	            modalPop: function modalPop(name) {
+	                alert(name);
+	            }
+	        });
+	    }
+	};
+
+	module.exports = modal;
+
+/***/ },
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(174);
+	var content = __webpack_require__(175);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(176)(content, {});
+	var update = __webpack_require__(177)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -29966,10 +29990,10 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(175)();
+	exports = module.exports = __webpack_require__(176)();
 	// imports
 
 
@@ -29980,7 +30004,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports) {
 
 	/*
@@ -30036,7 +30060,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

@@ -30,4 +30,5 @@ var popup = {
         });
     }
 }
+
 module.exports = popup;

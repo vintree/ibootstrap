@@ -14,14 +14,17 @@ import Confirm from "../js/confirm.js";
 import Popup from "../js/popup.js";
 import ViewvReveal from "../js/view-reveal.js";
 import Popover from "../js/popover.js";
+import Modal from "../js/util/modal.js";
 
 autoFont.init();
 
 Popup.init();
 ViewvReveal.init();
 Popover.init();
-
 Tips.init();
+
+Modal.init();
+
 window._alert = Alert;
 window._confirm = Confirm;
 

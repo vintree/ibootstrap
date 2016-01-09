@@ -155,14 +155,28 @@
         </div>
     </div>
 
-    <div id="alert" class="pop pop-modal">
+
+    <script id="tmp-alert" type="text/html" role="ibootstrap">
+        <div id="alert" class="pop pop-modal">
+            <div class="pop-alert">
+                <div class="pop-body">数据库更新错误！</div>
+                <div class="pop-foot">
+                    <div id="alert" role='confirm' data-modalPop=".pop" >确定</div>
+                    <!-- <div id="alertCB" role='confirm' data-modalPop="#alert">确定</div> -->
+                </div>
+            </div>
+        </div>
+    </script>
+
+
+    <!-- <div id="alert" class="pop pop-modal">
         <div class="pop-alert">
             <div class="pop-body">数据库更新错误！</div>
             <div class="pop-foot">
-                <div role='confirm' data-closePop=".pop">确定</div>
+                <div id="alert" role='confirm' data-modalPop=".pop" >确定</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div id="view" class="view view-modal">
