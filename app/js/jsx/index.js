@@ -23,7 +23,7 @@ ViewvReveal.init();
 Popover.init();
 Tips.init();
 
-Modal.init();
+// Modal.init();
 
 window._alert = Alert;
 window._confirm = Confirm;

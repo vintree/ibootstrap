@@ -4,25 +4,50 @@
 
 var tips = {
     init: function() {
+        this.show();
+        this.close();
+        this.showTip();
+        this.hideTip();
+    },
+    show: function() {
         var node;
         $('[data-target]').on('click', function() {
             node = $($(this).data('target'));
-            if(node.hasClass('tips')) {
-                node.addClass('fadeIn');
-            }
+            node.showTip(3000);
         });
-        this.dismiss();
     },
-    dismiss: function() {
+    close: function() {
         var node;
         $('[data-closeTips]').on('click', function() {
             node = $(this).parents($(this).data('closeTips'));
-            node.addClass('fade').removeClass('fadeIn');
-            // node.removeClass('fadeIn').addClass('fade');
-            setTimeout(function() {
-                node.removeClass('fade');
-            }, 300);
+            node.hideTip();
         });
+    },
+    showTip: function() {
+        $.fn.extend({
+            showTip: function(time) {
+                var node = $(this);
+                if(node.hasClass('tips')) {
+                    node.addClass('fadeIn');
+                }
+                if(!!time) {
+                    setTimeout(function() {
+                        node.hideTip();
+                    }, time);
+                }
+            }
+        })
+    },
+    hideTip: function() {
+        $.fn.extend({
+            hideTip: function() {
+                var node = $(this);
+                node.addClass('fade').removeClass('fadeIn');
+                setTimeout(function() {
+                    node.removeClass('fade');
+                }, 300);
+            }
+        })
     }
 }
 

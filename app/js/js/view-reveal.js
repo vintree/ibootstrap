@@ -32,6 +32,12 @@ var view = {
                 }, 300);
             }
         });
+    },
+    showView: function() {
+        
+    },
+    hideView: function() {
+
     }
 }
 module.exports = view;

@@ -48,21 +48,21 @@ webpackJsonp([0,1],[
 
 	var _popup2 = _interopRequireDefault(_popup);
 
-	var _viewReveal = __webpack_require__(171);
+	var _viewReveal = __webpack_require__(170);
 
 	var _viewReveal2 = _interopRequireDefault(_viewReveal);
 
-	var _popover = __webpack_require__(172);
+	var _popover = __webpack_require__(171);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _modal = __webpack_require__(173);
+	var _modal = __webpack_require__(172);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(174);
+	__webpack_require__(173);
 
 	// ibootstrap 相关组件
 
@@ -73,7 +73,7 @@ webpackJsonp([0,1],[
 	_popover2.default.init();
 	_tips2.default.init();
 
-	_modal2.default.init();
+	// Modal.init();
 
 	window._alert = _alert2.default;
 	window._confirm = _confirm2.default;
@@ -29555,24 +29555,49 @@ webpackJsonp([0,1],[
 
 	var tips = {
 	    init: function init() {
+	        this.show();
+	        this.close();
+	        this.showTip();
+	        this.hideTip();
+	    },
+	    show: function show() {
 	        var node;
 	        $('[data-target]').on('click', function () {
 	            node = $($(this).data('target'));
-	            if (node.hasClass('tips')) {
-	                node.addClass('fadeIn');
-	            }
+	            node.showTip(3000);
 	        });
-	        this.dismiss();
 	    },
-	    dismiss: function dismiss() {
+	    close: function close() {
 	        var node;
 	        $('[data-closeTips]').on('click', function () {
 	            node = $(this).parents($(this).data('closeTips'));
-	            node.addClass('fade').removeClass('fadeIn');
-	            // node.removeClass('fadeIn').addClass('fade');
-	            setTimeout(function () {
-	                node.removeClass('fade');
-	            }, 300);
+	            node.hideTip();
+	        });
+	    },
+	    showTip: function showTip() {
+	        $.fn.extend({
+	            showTip: function showTip(time) {
+	                var node = $(this);
+	                if (node.hasClass('tips')) {
+	                    node.addClass('fadeIn');
+	                }
+	                if (!!time) {
+	                    setTimeout(function () {
+	                        node.hideTip();
+	                    }, time);
+	                }
+	            }
+	        });
+	    },
+	    hideTip: function hideTip() {
+	        $.fn.extend({
+	            hideTip: function hideTip() {
+	                var node = $(this);
+	                node.addClass('fade').removeClass('fadeIn');
+	                setTimeout(function () {
+	                    node.removeClass('fade');
+	                }, 300);
+	            }
 	        });
 	    }
 	};
@@ -29754,7 +29779,7 @@ webpackJsonp([0,1],[
 
 	'use strict';
 
-	var _events = __webpack_require__(170);
+	var _events = __webpack_require__(177);
 
 	var _events2 = _interopRequireDefault(_events);
 
@@ -29762,26 +29787,47 @@ webpackJsonp([0,1],[
 
 	var popup = {
 	    init: function init() {
+	        this.show();
+	        this.close();
+	        this.showPop();
+	        this.hidePop();
+	    },
+	    show: function show() {
 	        var node;
 	        $('[data-target]').on('click', function () {
 	            node = $($(this).data('target'));
-	            if (node.hasClass('pop')) {
-	                _events2.default.untouchmove();
-	                node.addClass('fadeIn').removeClass('fade');
-	            }
+	            node.showPop();
 	        });
-	        this.dismiss();
 	    },
-	    dismiss: function dismiss() {
+	    close: function close() {
 	        var node;
 	        $('[data-closePop]').on('click', function () {
 	            _events2.default.touchmove();
 	            node = $(this).parents($(this).data('closePop'));
-	            if (node.hasClass('pop')) {
-	                node.addClass('fade').removeClass('fadeIn');
-	                setTimeout(function () {
-	                    node.removeClass('fade');
-	                }, 300);
+	            node.hidePop();
+	        });
+	    },
+	    showPop: function showPop() {
+	        $.fn.extend({
+	            showPop: function showPop() {
+	                var node = $(this);
+	                if (node.hasClass('pop')) {
+	                    _events2.default.untouchmove();
+	                    node.addClass('fadeIn').removeClass('fade');
+	                }
+	            }
+	        });
+	    },
+	    hidePop: function hidePop() {
+	        $.fn.extend({
+	            hidePop: function hidePop() {
+	                var node = $(this);
+	                if (node.hasClass('pop')) {
+	                    node.addClass('fade').removeClass('fadeIn');
+	                    setTimeout(function () {
+	                        node.removeClass('fade');
+	                    }, 300);
+	                }
 	            }
 	        });
 	    }
@@ -29794,32 +29840,6 @@ webpackJsonp([0,1],[
 
 /***/ },
 /* 170 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	/*
-	    基础事件
-	*/
-	var events = {
-	    // 取消禁止滑动
-	    touchmove: function touchmove() {
-	        document.ontouchmove = function () {
-	            return true;
-	        };
-	    },
-	    // 设置禁止滑动
-	    untouchmove: function untouchmove() {
-	        document.ontouchmove = function () {
-	            return false;
-	        };
-	    }
-	};
-
-	module.exports = events;
-
-/***/ },
-/* 171 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29858,12 +29878,14 @@ webpackJsonp([0,1],[
 	                }, 300);
 	            }
 	        });
-	    }
+	    },
+	    showView: function showView() {},
+	    hideView: function hideView() {}
 	};
 	module.exports = view;
 
 /***/ },
-/* 172 */
+/* 171 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29946,34 +29968,36 @@ webpackJsonp([0,1],[
 	module.exports = popover;
 
 /***/ },
-/* 173 */
+/* 172 */
 /***/ function(module, exports) {
 
+	// var modal = {
+	//     init: function() {
+	//         $.fn.extend({
+	//             modalPop: function(state) {
+	//                 console.log($(this));
+	//                 if(state === 'hide') {
+	//
+	//                 }
+	//             }
+	//         });
+	//     },
+	// }
+	//
+	// module.exports = modal;
 	"use strict";
 
-	var modal = {
-	    init: function init() {
-	        $.fn.extend({
-	            modalPop: function modalPop(name) {
-	                alert(name);
-	            }
-	        });
-	    }
-	};
-
-	module.exports = modal;
-
 /***/ },
-/* 174 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(175);
+	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(177)(content, {});
+	var update = __webpack_require__(176)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -29990,10 +30014,10 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 175 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(176)();
+	exports = module.exports = __webpack_require__(175)();
 	// imports
 
 
@@ -30004,7 +30028,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 176 */
+/* 175 */
 /***/ function(module, exports) {
 
 	/*
@@ -30060,7 +30084,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 177 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -30312,6 +30336,32 @@ webpackJsonp([0,1],[
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 177 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	/*
+	    基础事件
+	*/
+	var events = {
+	    // 取消禁止滑动
+	    touchmove: function touchmove() {
+	        document.ontouchmove = function () {
+	            return true;
+	        };
+	    },
+	    // 设置禁止滑动
+	    untouchmove: function untouchmove() {
+	        document.ontouchmove = function () {
+	            return false;
+	        };
+	    }
+	};
+
+	module.exports = events;
 
 /***/ }
 ]);

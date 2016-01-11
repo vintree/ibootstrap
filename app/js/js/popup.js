@@ -6,26 +6,47 @@ import Events from "./util/events.js";
 
 var popup = {
     init: function() {
+        this.show();
+        this.close();
+        this.showPop();
+        this.hidePop();
+    },
+    show: function() {
         var node;
         $('[data-target]').on('click', function() {
             node = $($(this).data('target'));
-            if(node.hasClass('pop')) {
-                Events.untouchmove();
-                node.addClass('fadeIn').removeClass('fade');
-            }
+            node.showPop();
         });
-        this.dismiss();
     },
-    dismiss: function() {
+    close: function() {
         var node;
         $('[data-closePop]').on('click', function() {
             Events.touchmove();
             node = $(this).parents($(this).data('closePop'));
-            if(node.hasClass('pop')) {
-                node.addClass('fade').removeClass('fadeIn');
-                setTimeout(function() {
-                    node.removeClass('fade');
-                }, 300);
+            node.hidePop();
+        });
+    },
+    showPop: function() {
+        $.fn.extend({
+            showPop: function() {
+                var node = $(this);
+                if(node.hasClass('pop')) {
+                    Events.untouchmove();
+                    node.addClass('fadeIn').removeClass('fade');
+                }
+            }
+        })
+    },
+    hidePop: function() {
+        $.fn.extend({
+            hidePop: function() {
+                var node = $(this);
+                if(node.hasClass('pop')) {
+                    node.addClass('fade').removeClass('fadeIn');
+                    setTimeout(function() {
+                        node.removeClass('fade');
+                    }, 300);
+                }
             }
         });
     }
