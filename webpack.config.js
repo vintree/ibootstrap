@@ -16,7 +16,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        index: './app/js/_js/ibootstrap.js',
+        index: './app/js/js/ibootstrap.js',
     },
     output: {
         publicPath: "http://127.0.0.1:9090/static/dist/",

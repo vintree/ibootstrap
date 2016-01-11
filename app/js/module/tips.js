@@ -2,7 +2,9 @@
     提示
 */
 
-var tips = {
+const tips = {
+    params: function() {
+    },
     init: function() {
         this.show();
         this.close();
@@ -10,23 +12,21 @@ var tips = {
         this.hideTip();
     },
     show: function() {
-        var node;
         $('[data-target]').on('click', function() {
-            node = $($(this).data('target'));
+            const node = $($(this).data('target'));
             node.showTip();
         });
     },
     close: function() {
-        var node;
         $('[data-closeTips]').on('click', function() {
-            node = $(this).parents($(this).data('closeTips'));
+            const node = $(this).parents($(this).data('closeTips'));
             node.hideTip();
         });
     },
     showTip: function() {
         $.fn.extend({
             showTip: function(time) {
-                var node = $(this);
+                const node = $(this);
                 if(node.hasClass('tips')) {
                     node.addClass('fadeIn');
                 }
@@ -41,7 +41,7 @@ var tips = {
     hideTip: function() {
         $.fn.extend({
             hideTip: function() {
-                var node = $(this);
+                const node = $(this);
                 node.addClass('fade').removeClass('fadeIn');
                 setTimeout(function() {
                     node.removeClass('fade');

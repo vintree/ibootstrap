@@ -13,15 +13,15 @@ var popup = {
     },
     show: function() {
         var node;
-        $('[data-target]').on('click', function() {
-            node = $($(this).data('target'));
+        $('[data-target-pop]').on('click', function() {
+            node = $($(this).data('target-pop'));
             node.showPop();
         });
     },
     close: function() {
         var node;
         $('[data-closePop]').on('click', function() {
-            node = $(this).parents($(this).data('closePop'));
+            node = $(this).parents($(this).data('close-pop'));
             node.hidePop();
         });
     },

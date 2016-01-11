@@ -4,9 +4,9 @@ require('../../sass/ibootstrap.scss');
 import autoFont from '../common/autoFont.js';
 
 // 功能组件
-import Popup from "../js/popup.js";
-import Tips from "../js/tips.js";
-import ViewvReveal from "../js/viewReveal.js";
+import Popup from "../module/popup.js";
+import Tips from "../module/tips.js";
+import ViewvReveal from "../module/viewReveal.js";
 
 // 初始化 功能组件
 autoFont.init();
