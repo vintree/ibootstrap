@@ -13,7 +13,7 @@ var tips = {
         var node;
         $('[data-target]').on('click', function() {
             node = $($(this).data('target'));
-            node.showTip(3000);
+            node.showTip();
         });
     },
     close: function() {

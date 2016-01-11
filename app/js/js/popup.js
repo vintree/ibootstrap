@@ -21,7 +21,6 @@ var popup = {
     close: function() {
         var node;
         $('[data-closePop]').on('click', function() {
-            Events.touchmove();
             node = $(this).parents($(this).data('closePop'));
             node.hidePop();
         });
@@ -42,6 +41,7 @@ var popup = {
             hidePop: function() {
                 var node = $(this);
                 if(node.hasClass('pop')) {
+                    Events.touchmove();
                     node.addClass('fade').removeClass('fadeIn');
                     setTimeout(function() {
                         node.removeClass('fade');

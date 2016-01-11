@@ -16,18 +16,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        index: './app/js/jsx/index.js',
-        // star_result: './app/js/jsx/starResult.js'
-        // 'webpack-dev-server/client?http://127.0.0.1:3000', // WebpackDevServer host and port
-        // 'webpack/hot/only-dev-server',
-        // './src/js/main.js' // Your appʼs entry point
+        index: './app/js/_js/index.js',
     },
     output: {
         publicPath: "http://127.0.0.1:9090/static/dist/",
         path: path.join(__dirname, 'app/js/'),
-        // path: path.resolve(DEBUG ? __dirname+'app/js_dev/' : __dirname+'app/js_release'),
         filename: '[name].js'
-        // filename: DEBUG ? '[name].js' : '[chunkhash:8].[name].min.js',
     },
     resolve: {
         extensions: ['', '.js', 'jsx', '.sass', '.css', '.png', '.jpg', '.woff', '.ttf', '.eot', '.svg'],
@@ -36,16 +30,8 @@ module.exports = {
     // 新添加的module属性
     module: {
         loaders: [
-            // {
-            //     test: /\.js?$/,
-            //     loader: 'babel',
-            //     exclude: /(node_modules|bower_components)/,
-            //     query: {
-            //         presets: ['es2015']
-            //     }
-            // },
             {
-                test: /\.jsx?$/,
+                test: /\.js?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel', // 'babel-loader' is also a legal name to reference
                 query: {

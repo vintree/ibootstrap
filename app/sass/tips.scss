@@ -1,5 +1,5 @@
 // 提示信息
-$tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+// $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
 .tips {
     line-height: $base-height;
@@ -11,6 +11,10 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
         width: 100%;
         font-size: $base-size;
         transform: translateY(- $base-height);
+        .tips-describe {
+            padding: 0 .5rem;
+            @include ellipsis1;
+        }
     }
     &.fade {
         animation: 0.3s tips-top-fade;
@@ -45,7 +49,7 @@ $tips-ease-back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
         top: 0;
         right: 0;
         display: block;
-        width: 0.5rem;
+        width: .5rem;
         line-height: $base-height;
         text-align: center;
         color: #fff;
