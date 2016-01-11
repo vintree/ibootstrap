@@ -3,7 +3,7 @@
 ### 分享
 [Github 懒加载动画组件jpro](https://github.com/wuguzi/jpro)
 
-[Github react (0.1.4.2) + webpack + es6静态用法](https://github.com/wuguzi/reack-zhihu)
+[Github 「知乎PC」react (0.1.4.2) + webpack + es6静态用法](https://github.com/wuguzi/reack-zhihu)
 
 [GitHub google地图使用方法 + demo](https://github.com/wuguzi/googleMapApi)
 
@@ -35,6 +35,4 @@
 9、基于ibootstrap开发出项目级组件
 
 ### 使用前请提前导入jquery或zepto
-
-
 ### 待续。。。
