@@ -35,6 +35,8 @@
 ##### checkbox-inline
 ![](http://c.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=255a46349a16fdfadc6cc2ea84bfb725/dbb44aed2e738bd431a90f2ea68b87d6277ff921.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/checkbox-inline.png)
+
 ```
 	<div class="checkbox-inline">
         <label class="checkbox-label">
@@ -55,6 +57,9 @@
 ##### checkbox-block
 
 ![](http://e.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=a9d70d1ae2dde711e3d247f297dff56a/3812b31bb051f819faadbe55ddb44aed2e73e721.jpg)
+
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/checkbox-block.png)
+
 
 ```
 	<div class="checkbox-group checkbox-block">
@@ -77,6 +82,9 @@
 
 ![](http://d.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=1f8b391a34fa828bd52399e7cd2f7a45/a1ec08fa513d2697fa5bb54252fbb2fb4316d821.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/radio-inline.png)
+
+
 ```
 	<div class="radio-inline">
         <label class="radio-label">
@@ -97,6 +105,8 @@
 ##### checkbox-block
 
 ![](http://g.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=4fed44906b81800a6ae58d0a8105088b/8b13632762d0f7030f3a28c30ffa513d2697c521.jpg)
+
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/radio-block.png)
 
 ```
 	<div class="radio-group checkbox-block">
@@ -140,6 +150,9 @@
 
 ![](http://b.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=de5a46349a16fdfadc6ccaee84b4fd69/f703738da9773912caae387eff198618367ae221.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/button.png)
+
+
 ```
 	<div class="btn-group">
         <button class="btn btn-default btn-radius">(默认样式)「alert」</button>
@@ -160,6 +173,8 @@
 
 ![](http://c.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=4b8a30217cec54e745ec161e8903ea6d/79f0f736afc3793160e03b36ecc4b74543a91120.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/button-disabled.png)
+
 
 ```
 	<div class="btn-group">
@@ -177,6 +192,8 @@
 ##### button-block 长度
 
 ![](http://d.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=d3bbf3c353e736d15c138008ab6b3eff/f636afc379310a55d8ac63ebb04543a982261020.jpg)
+
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/button-col.png)
 
 ```
 	<div class="btn-group">
@@ -211,6 +228,9 @@
 ##### form表单
 
 ![](http://h.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=1690341e5b6034a82de2bc85fb237225/e824b899a9014c08e1b395ba0d7b02087bf4f421.jpg)
+
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/form.png)
+
 
 ```
 EQ1:
@@ -251,6 +271,9 @@ EQ2:
 
 ![](http://e.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=d363870b45a7d933bba8e0779d7bea62/64380cd7912397dd7d94251b5e82b2b7d1a287c4.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/list.png)
+
+
 ```
 	<div class="flist-group">
         <ul class="flist-unit-group">
@@ -285,6 +308,10 @@ EQ2:
 
 ![](http://b.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=30932564d61373f0f13f6b9b943f708a/ac345982b2b7d0a2ed24b982ccef76094a369ac4.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/paButton1.png)
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/paButton2.png)
+
+
 ```
 	<div class="paButton btn-primary">
         <div id="paButton" class="paButton-layout paButton-off" data-target-paButton='.paButton-layout' data-state="off">
@@ -306,6 +333,9 @@ EQ2:
 
 ##### 确认弹窗
 ![](http://b.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=670bda49d7160924d825a61fe4370e8b/3b87e950352ac65cc1cedb6cfcf2b21192138ae2.jpg)
+
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/confirm.png)
+
 
 ```
 
@@ -335,6 +365,9 @@ EQ2:
 ![](http://b.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=a25afe264c36acaf5de092f84ce9b661/024f78f0f736afc31084827ab419ebc4b7451220.jpg
 )
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/alert.png)
+
+
 ```
 
 	<button class="btn btn-default btn-radius" data-target-pop="#alert">(默认样式)「alert」</button>
@@ -356,6 +389,9 @@ EQ2:
 
 ##### popup 多选弹窗
 ![](http://c.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=04a0fba2ae773912c0268961c822f725/b90e7bec54e736d1dd8d31179c504fc2d5626917.jpg)
+
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/checkbox-group.png)
+
 
 ```
 	<button class="btn btn-success" data-target-pop="#selectCheckbox">(成功) Success「多选」</button>
@@ -403,6 +439,9 @@ EQ2:
 ##### popup 单选弹窗
 ![](http://a.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=a32b73c2ac64034f0bcdc6029ff34240/77094b36acaf2edd4b1cf4f68a1001e9380193c4.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/radio-group.png)
+
+
 ```
 	<button class="btn btn-info" data-target-pop="#selectRadio">(一般信息) Info 「单选」</button>
 
@@ -437,6 +476,9 @@ EQ2:
 
 ![](http://g.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=f0c702adbe014a90853e4abd994c482f/8c1001e93901213f56def3c353e736d12e2e95c4.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/tips.png)
+
+
 ```
     <button class="btn btn-warning" data-target-tips="#tips-top">(警告) Warning 「tips-top」</button>
     
@@ -462,6 +504,8 @@ EQ2:
 
 ##### view 视口
 ![](http://c.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=04d3fba2ae773912c0268961c822f725/b90e7bec54e736d1ddfe31179c504fc2d46269c4.jpg)
+
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/view.png)
 
 ```
 	<button class="btn btn-danger" data-target-view="#view">(警告) Danger 「view」</button>
