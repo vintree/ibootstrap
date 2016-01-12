@@ -13,15 +13,14 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var SwigWebpackPlugin = require('swig-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-
 module.exports = {
     entry: {
-        index: './app/js/js/ibootstrap.js',
+        index: './app/js/js/ibootstrap.all.js',
     },
     output: {
         publicPath: "http://127.0.0.1:9090/static/dist/",
         path: path.join(__dirname, 'app/js/lib/'),
-        filename: 'ibootstrap.js'
+        filename: 'ibootstrap.all.js'
     },
     resolve: {
         extensions: ['', '.js', 'jsx', '.sass', '.css', '.png', '.jpg', '.woff', '.ttf', '.eot', '.svg'],
@@ -37,11 +36,6 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015']
                 }
-            },
-            //使用link引用
-            {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },
             {
                 test: /\.(css)$/,
@@ -78,7 +72,7 @@ module.exports = {
     },
     plugins: [
         commonsPlugin,
-        new ExtractTextPlugin("[name].css")
+        new ExtractTextPlugin("ibootstrap.css")
         // UglifyJsPlugin,
         // new Clean(['./app/js/', './dist/html/']),
         // new HtmlWebpackPlugin(

@@ -15,12 +15,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        index: './app/js/js/ibootstrap.js',
+        index: './app/js/js/ibootstrap.all.js',
     },
     output: {
         publicPath: "http://127.0.0.1:9090/static/dist/",
         path: path.join(__dirname, 'dist/js/'),
-        filename: 'ibootstrap.min.js'
+        filename: 'ibootstrap.all.min.js'
     },
     resolve: {
         extensions: ['', '.js', 'jsx', '.sass', '.css', '.png', '.jpg', '.woff', '.ttf', '.eot', '.svg'],
@@ -71,24 +71,16 @@ module.exports = {
             }]
     },
     plugins: [
-        // commonsPlugin,
-        // new ExtractTextPlugin("ibootstrap.css")
-        UglifyJsPlugin
-        // new Clean(['./app/js/', './dist/html/']),
-        // new HtmlWebpackPlugin(
-        //     {
-        //         filename: '../html/star_result.html',
-        //         template: './app/html/star_result.html', // 原始模块
-        //         inject: 'body', // 放在body中  & eq: 'head'  放在head中
-        //         chunks: ['common', 'star_result']
-        //     }
-        // ),
+        UglifyJsPlugin,
+        new CopyWebpackPlugin([
+            { from: 'app/js/lib', to: './source/' },
+        ])
     ]
 };
 
 
 
 /*
-用 webpack --config webpack.relase.js 指定另一个名字的配置文件
+用 webpack --config webpack.release.js 指定另一个名字的配置文件
 这个文件当中可以写不一样配置, 专门用于代码上线时的操作
 */

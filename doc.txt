@@ -1,0 +1,4 @@
+webpack
+webpack --config webpack.release.all.js
+webpack --config webpack.release.js
+gulp

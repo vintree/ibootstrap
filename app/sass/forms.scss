@@ -26,7 +26,7 @@ $border: 1px solid #ccc;
                 line-height: $base-height;
                 text-align: center;
                 color: $base-smallColor;
-                font-size: $base-infoSize;
+                font-size: $base-infoSize/1.3;
                 @include ellipsis1;
             }
         }

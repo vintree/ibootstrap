@@ -3,36 +3,29 @@
 ### 分享
 [Github 懒加载动画组件jpro](https://github.com/wuguzi/jpro)
 
-[Github 「知乎PC」react (0.1.4.2) + webpack + es6静态用法](https://github.com/wuguzi/reack-zhihu)
+[Github 「知乎PC、Head部分」react (0.1.4.2) + webpack + es6静态用法](https://github.com/wuguzi/reack-zhihu)
 
 [GitHub google地图使用方法 + demo](https://github.com/wuguzi/googleMapApi)
 
 [GitHub 移动端UI库ibootstrap](https://github.com/wuguzi/ibootstrap)
 
 
-### ibootstrap针对移动端开发的UI库，针对移动端特点添加了许多新特性；
+### ibootstrap针对移动端开发的UI库；
 
-特点：
+#####看似相同，其实大有变化：
 
-1、放弃了媒体查询
+* 未采用媒体查询策略，减少了大量冗余代码。
 
-2、采用rem作为单位
+* 针对不用屏幕尺寸做了精细调整，去除了大、中、小尺寸的额外样式。
 
-3、弹性盒模型布局
+* table在移动端使用非常少见，所有该版本未加入table样式。
 
-4、针对移动端样式
+* ibootstrap只针对移动端，减少了不必要的前缀兼容，可以看成jQuery和Zepto的关系。
 
-4、参考了bootstrap用法，使用简单
+* 直接引入 ibootstrap.all.min.js || ibootstrap.all.js 即可完成样式注入，其中包含了组件功能。
 
-5、使用sass语法
+* 同时把ibootstrap.all.min.js 拆分成 iboostrap.min.css + ibootstrap.min.js。
 
-6、es6特性
-
-7、可自定义webpack打包成AMD、CMD、import使用方法
-
-8、使用gulp集中打包成最后文件
-
-9、基于ibootstrap开发出项目级组件
 
 ### 使用前请提前导入jquery或zepto
 ### 待续。。。
