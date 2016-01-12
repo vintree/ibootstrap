@@ -4,8 +4,8 @@
 var view = {
     init: function() {
         var node;
-        $('[data-target]').on('click', function() {
-            node = $($(this).data('target'));
+        $('[data-target-view]').on('click', function() {
+            node = $($(this).data('target-view'));
             if(node.hasClass('view')) {
                 $('html, body').addClass('ofHidden');
                 node.addClass('fadeIn').removeClass('fade');
@@ -14,11 +14,11 @@ var view = {
                 }, 100);
             }
         });
-        this.dismiss();
+        this.close();
     },
-    dismiss: function() {
+    close: function() {
         var node;
-        $('[data-closeView]').on('click', function() {
+        $('[data-close-view]').on('click', function() {
             $('html, body').removeClass('ofHidden');
             node = $(this).parents($(this).data('closeView'));
             if(node.hasClass('view')) {
@@ -34,7 +34,7 @@ var view = {
         });
     },
     showView: function() {
-        
+
     },
     hideView: function() {
 

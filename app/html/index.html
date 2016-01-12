@@ -174,7 +174,7 @@
     <div id="view" class="view view-modal">
         <div class="views view-reveal">
             <div class="view-head">
-                <div role='dismiss' data-closeView=".view">取消</div>
+                <div role='dismiss' data-close-view=".view">取消</div>
                 <div class="view-tit">基围虾、商品详情</div>
                 <div role='confirm'>确认</div>
             </div>
@@ -210,14 +210,14 @@
         </div>
     </div>
 
-    <div id="content">
+    <div class="btn-group">
         <!-- <button class="btn btn-default btn-radius" data-targetTips="#tipsDanger" rolee="alert" data-target="#myModal">(默认样式)「alert」</button> -->
         <button class="btn btn-default btn-radius" data-target-pop="#alert">(默认样式)「alert」</button>
         <button class="btn btn-primary btn-unradius" data-target-pop="#confirm">(首选项) Primary「confirm」</button>
         <button class="btn btn-success" data-target-pop="#selectCheckbox">(成功) Success「多选」</button>
         <button class="btn btn-info" data-target-pop="#selectRadio">(一般信息) Info 「单选」</button>
         <button class="btn btn-warning" data-target-tips="#tips-top">(警告) Warning 「tips-top」</button>
-        <button class="btn btn-danger" data-target="#view">(警告) Danger 「view」</button>
+        <button class="btn btn-danger" data-target-view="#view">(警告) Danger 「view」</button>
     </div>
 
     <div class="form-group">
@@ -277,7 +277,7 @@
         <button class="btn btn-danger" disabled="disabled">(警告) Danger</button>
     </div>
 
-    <div class="">
+    <div class="btn-group">
         <div class="col-md-2">
             <button class="btn btn-default btn-radius" disabled="disabled">(默认样式)</button>
         </div>
