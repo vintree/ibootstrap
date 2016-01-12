@@ -27,5 +27,6 @@
 * 同时把ibootstrap.all.min.js 拆分成 iboostrap.min.css + ibootstrap.min.js。
 
 
-### 使用前请提前导入jquery或zepto
-### 待续。。。
+##### 使用前请提前导入jquery或zepto
+
+### 基本样式「图片未出现，可以科学上网，即可看到」
