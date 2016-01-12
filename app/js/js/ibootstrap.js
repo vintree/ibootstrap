@@ -6,11 +6,12 @@ import autoFont from '../common/autoFont.js';
 // 功能组件
 import Popup from "../module/popup.js";
 import Tips from "../module/tips.js";
-import ViewvReveal from "../module/viewReveal.js";
-
+import ViewReveal from "../module/viewReveal.js";
+import PaButton from "../module/paButton.js";
 // 初始化 功能组件
 autoFont.init();
 
 Popup.init();
-ViewvReveal.init();
+ViewReveal.init();
 Tips.init();
+PaButton.init();

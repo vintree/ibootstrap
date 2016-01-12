@@ -8,7 +8,7 @@ const concat = require('gulp-concat');
 const minifycss = require('gulp-minify-css');
 
 gulp.task('es6', function() {
-    return gulp.src(['app/js/lib/ibootstrap.js', 'app/js/lib/common.js'])
+    return gulp.src(['app/js/lib/common.js', 'app/js/lib/ibootstrap.js'])
     .pipe(babel( { presets: ['es2015'] } ) )
     .pipe(concat('ibootstrap.js'))
     .pipe(uglify())

@@ -1,6 +1,6 @@
 /*
-    触发对象：需添加 data-target = '#target'
-    释放对象：需添加 data-dismiss = '.pop'
+    触发对象：需添加 data-target-pop = '#target'
+    释放对象：需添加 data-close-pop = '.pop'
 */
 import Events from "./util/events.js";
 
@@ -20,7 +20,7 @@ var popup = {
     },
     close: function() {
         var node;
-        $('[data-closePop]').on('click', function() {
+        $('[data-close-pop]').on('click', function() {
             node = $(this).parents($(this).data('close-pop'));
             node.hidePop();
         });

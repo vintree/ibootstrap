@@ -1,0 +1,67 @@
+// 开关样式
+$onOffHeight: $base-height * 0.7;
+
+.paButton {
+    position: relative;
+    height: $onOffHeight;
+    width: $base-height * 1.8;
+    border-radius: $base-height;
+    border: $base-border;
+    transform: rotate(180deg);
+    overflow: hidden;
+    .paButton-layout {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        border-radius: $base-height;
+        overflow: hidden;
+        &.paButton-on {
+            width: $base-height * 0.67;
+        }
+        &.paButton-off {
+            width: 100%;
+        }
+        &.off {
+            animation: .5s off;
+            animation-fill-mode: forwards;
+            .onOff-botton {
+                transition: all 1s;
+                box-shadow: none;
+            }
+        }
+        &.on {
+            animation: .5s on;
+            animation-fill-mode: forwards;
+        }
+        .paButton-botton {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: $base-height * 0.67 ;
+            width: $base-height * 0.67;
+            border-radius: 100%;
+            box-shadow: 0 0 .1rem #333;
+        }
+    }
+}
+
+@keyframes on {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: $base-height * 0.67;
+    }
+}
+
+@keyframes off {
+    0% {
+        width: $base-height * 0.67;
+    }
+    100% {
+        width: 100%;
+    }
+}

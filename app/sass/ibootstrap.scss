@@ -24,7 +24,7 @@
 
 // 按钮样式
 @import "button";//父类库
-@import "button-groups";
+@import "buttonGroups";
 
 //  分配长度
 @import "allot";
@@ -41,20 +41,20 @@
 // 功能列表
 @import "flist";
 
-// 弹出背景层
-@import "layer";
-
-// 弹出框
-@import "pop";//父类库
-@import "pop-alert";// 提醒弹框
-@import "pop-confirm";// 确认弹框
-@import "pop-box";// 单选、复选弹框
-
-// 视口
-@import "view-reveal";
-
+// 开关
+@import "paButton";
 
 /*
     组件样式
 */
+// 弹出框
+@import "pop";//父类库
+@import "popAlert";// 提醒弹框
+@import "popConfirm";// 确认弹框
+@import "popBox";// 单选、复选弹框
+
+// 视口
+@import "viewReveal";
+
+//
 @import "./component/popover";

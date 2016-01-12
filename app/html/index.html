@@ -7,7 +7,16 @@
     <link rel="stylesheet" type="text/css" href="../font/css/font-awesome.min.css">
 </head>
 <body style="padding: 10px;">
-    <header id="header"></header>
+
+    <div class="paButton btn-primary">
+        <div id="paButton" class="paButton-layout paButton-off" data-target-paButton='.paButton-layout' data-state="off">
+            <div class="paButton-botton"></div>
+        </div>
+    </div>
+    <br/>
+
+
+
 
     <div class="loading-group">
         <div class="loading-rotundity"></div>
@@ -75,7 +84,7 @@
 
     <div id="tips-top" class="tips tips-top-group tips-primary">
         <div class="tips-describe">帐号和密码不匹配，请重新尝试</div>
-        <div class="tips-cancel" role="cancel" data-closeTips=".tips" ><i class="fa fa-close"></i></div>
+        <div class="tips-cancel" role="cancel" data-close-tips=".tips" ><i class="fa fa-close"></i></div>
     </div>
 
     <div id="selectRadio" class="pop pop-modal">
@@ -97,7 +106,7 @@
                     </div>
                 </div>
                 <div class="pop-foot">
-                    <div role='dismiss' data-closePop=".pop">取消</div>
+                    <div role='dismiss' data-close-pop=".pop">取消</div>
                     <div role='confirm'>确认</div>
                 </div>
             </form>
@@ -137,7 +146,7 @@
                     </div>
                 </div>
                 <div class="pop-foot">
-                    <div role='dismiss' data-closePop=".pop">取消</div>
+                    <div role='dismiss' data-close-pop=".pop">取消</div>
                     <div role='confirm'>确认</div>
                 </div>
             </form>
@@ -148,7 +157,7 @@
         <div class="pop-confirm">
             <div class="pop-body">数据库更新错误！</div>
             <div class="pop-foot">
-                <div role='dismiss' data-closePop=".pop">取消</div>
+                <div role='dismiss' data-close-pop=".pop">取消</div>
                 <div role='confirm'>确定</div>
             </div>
         </div>
@@ -183,7 +192,7 @@
         <button class="btn btn-primary btn-unradius" data-target-pop="#confirm">(首选项) Primary「confirm」</button>
         <button class="btn btn-success" data-target-pop="#selectCheckbox">(成功) Success「多选」</button>
         <button class="btn btn-info" data-target-pop="#selectRadio">(一般信息) Info 「单选」</button>
-        <button class="btn btn-warning" data-target="#tips-top">(警告) Warning 「tips-top」</button>
+        <button class="btn btn-warning" data-target-tips="#tips-top">(警告) Warning 「tips-top」</button>
         <button class="btn btn-danger" data-target="#view">(警告) Danger 「view」</button>
     </div>
 
@@ -319,6 +328,7 @@
 </body>
 </html>
 <script src="../js/jquery.min.js"></script>
+<!-- <script src="../../dist/js/ibootstrap.min.js"></script> -->
 <script src="../js/lib/common.js"></script>
 <script src="../js/lib/ibootstrap.js"></script>
 <script src="../js/index.js"></script>
