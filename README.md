@@ -120,6 +120,9 @@
 
 ![](http://g.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=bc0c2c204cfbfbedd859327b48c0cc47/30adcbef76094b364a0ca6f2a4cc7cd98d109d17.jpg)
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/button-inline.png)
+
+
 ```
 	<div class="btn-group btn-inline">
         <button class="btn btn-default btn-radius" >(默认样式)</button>
