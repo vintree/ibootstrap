@@ -10,6 +10,11 @@
 
 [GitHub 移动端UI库ibootstrap](https://github.com/wuguzi/ibootstrap)
 
+### 下面会说明适用方法,如果想看效果前往
+
+app/html/index.html
+
+里面有全部效果实现
 
 ### ibootstrap针对移动端开发的UI库；
 
@@ -30,7 +35,7 @@
 
 ##### 使用前请提前导入jquery或zepto
 
-### 基本样式
+### 基本样式「多图，若没有请科学上网！」
 
 ##### checkbox-inline
 <!--![](http://c.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=255a46349a16fdfadc6cc2ea84bfb725/dbb44aed2e738bd431a90f2ea68b87d6277ff921.jpg)-->
@@ -123,7 +128,7 @@
             <span class="radio-describe">3</span>
         </label>
     </div>
-    
+
 ```
 
 ##### button-inline
@@ -142,7 +147,7 @@
         <button class="btn btn-warning">(警告) Warning</button>
         <button class="btn btn-danger">(警告) Danger</button>
     </div>
-    
+
 ```
 
 
@@ -162,7 +167,7 @@
         <button class="btn btn-warning">(警告) Warning 「tips-top」</button>
         <button class="btn btn-danger">(警告) Danger 「view」</button>
     </div>
-    
+
 ```
 
 * .btn 样式默认带有圆角样式,如果不需要可加上.btn-unradius
@@ -185,7 +190,7 @@
         <button class="btn btn-warning" disabled="disabled">(警告) Warning</button>
         <button class="btn btn-danger" disabled="disabled">(警告) Danger</button>
     </div>
-                        
+
 ```
 * 在属性上添加 disabled="disabled" 即可添加不可点击样式
 
@@ -220,7 +225,7 @@
             <button class="btn btn-danger" disabled="disabled">(警告) Danger</button>
         </div>
     </div>
-    
+
 ```
 * 在该实例可以看到col-md-*的功能
 
@@ -263,7 +268,7 @@ EQ2:
             <input type="password" placeholder="输入密码">
         </div>
     </div>
-    
+
 ```
 
 
@@ -296,9 +301,9 @@ EQ2:
             </li>
         </ul>
     </div>
-    
+
 ```
-* 该样式使用到了 icon, 该项目使用 [fontawesome](http://fontawesome.io/icons/) 第三方库 
+* 该样式使用到了 icon, 该项目使用 [fontawesome](http://fontawesome.io/icons/) 第三方库
 
 
 ### 组件
@@ -341,7 +346,7 @@ EQ2:
 
 	<button class="btn btn-primary btn-unradius" data-target-pop="#confirm">(首选项) Primary「confirm」</button>
 
-	
+
 	<div id="confirm" class="pop pop-modal">
         <div class="pop-confirm">
             <div class="pop-body">数据库更新错误！</div>
@@ -371,7 +376,7 @@ EQ2:
 ```
 
 	<button class="btn btn-default btn-radius" data-target-pop="#alert">(默认样式)「alert」</button>
-	
+
 	<div id="alert" class="pop pop-modal">
         <div class="pop-alert">
             <div class="pop-body">数据库更新错误！</div>
@@ -385,7 +390,7 @@ EQ2:
 使用方式和 [确认弹窗]类似, 提醒几点不同
 
 * alert确定 和 confirm 取消 其实是一样的功能, 但含义不同, 可在要取消的 dom 上放置 data-close-pop=".pop"即可
- 
+
 
 ##### popup 多选弹窗
 <!--![](http://c.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=04a0fba2ae773912c0268961c822f725/b90e7bec54e736d1dd8d31179c504fc2d5626917.jpg)-->
@@ -472,7 +477,7 @@ EQ2:
     </div>
 ```
 
-##### tips 提醒 
+##### tips 提醒
 <!--![](http://g.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=f0c702adbe014a90853e4abd994c482f/8c1001e93901213f56def3c353e736d12e2e95c4.jpg)-->
 
 ![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/tips.png)
@@ -480,7 +485,7 @@ EQ2:
 
 ```
     <button class="btn btn-warning" data-target-tips="#tips-top">(警告) Warning 「tips-top」</button>
-    
+
 
 	<div id="tips-top" class="tips tips-top-group tips-primary">
         <div class="tips-describe">帐号和密码不匹配，请重新尝试</div>
@@ -496,7 +501,7 @@ EQ2:
 * $('#tips-top').hideTips()  主动取消
 
 
-注意: 
+注意:
 
 * data-target-tips="#tips-top" 其实触发了 $('#tips-top').showTips() 方法,如果不加参数,默认3000秒自动触发取消事件
 
@@ -508,7 +513,7 @@ EQ2:
 
 ```
 	<button class="btn btn-danger" data-target-view="#view">(警告) Danger 「view」</button>
-	
+
 	<div id="view" class="view view-modal">
         <div class="views view-reveal">
             <div class="view-head">
