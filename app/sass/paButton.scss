@@ -1,9 +1,10 @@
 // 开关样式
-$onOffHeight: $base-height * 0.7;
+
+$time: .6s;
 
 .paButton {
     position: relative;
-    height: $onOffHeight;
+    height: $base-height * 0.7;
     width: $base-height * 1.8;
     border-radius: $base-height;
     border: $base-border;
@@ -25,7 +26,7 @@ $onOffHeight: $base-height * 0.7;
             width: 100%;
         }
         &.off {
-            animation: .5s off;
+            animation: $time off cubic-bezier(.25,.1,.25,1);
             animation-fill-mode: forwards;
             .onOff-botton {
                 transition: all 1s;
@@ -33,7 +34,7 @@ $onOffHeight: $base-height * 0.7;
             }
         }
         &.on {
-            animation: .5s on;
+            animation: $time on cubic-bezier(.25,.1,.25,1);
             animation-fill-mode: forwards;
         }
         .paButton-botton {

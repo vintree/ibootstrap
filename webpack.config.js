@@ -78,6 +78,7 @@ module.exports = {
     },
     plugins: [
         commonsPlugin,
+        new ExtractTextPlugin("[name].css")
         // UglifyJsPlugin,
         // new Clean(['./app/js/', './dist/html/']),
         // new HtmlWebpackPlugin(
