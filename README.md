@@ -269,8 +269,12 @@ EQ2:
     </div>
 
 ```
+
 ##### 虽然还没有到介绍组件环节，但这里用到组件功能，需要提前提一下
-data-codemsg="{{5}}s后再次获取" 这个属性表示点击后，需要展示的文本内容，{{5}}表示倒计时时间，时间结束后，回复初始文本,看下图
+>
+    data-target-codemsg="#codeMsg" 触发事件标识
+    data-codemsg="{{5}}s后再次获取"  触发时，展示的文档内容
+    * 这个属性表示点击后，需要展示的文本内容，{{5}}表示倒计时时间，时间结束后，回复初始文本,看下图
 
 ![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/code.png)
 
