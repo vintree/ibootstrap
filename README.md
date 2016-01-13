@@ -1,6 +1,7 @@
 # ibootstrap
 
-![](http://photocdn.sohu.com/20150527/mp16641068_1432725337643_1_th.jpeg =100x80)
+<!--![](http://photocdn.sohu.com/20150527/mp16641068_1432725337643_1_th.jpeg =100x80)
+-->
 ### 分享
 [Github 懒加载动画组件jpro](https://github.com/wuguzi/jpro)
 
@@ -12,9 +13,7 @@
 
 ### 下面会说明适用方法,如果想看效果前往
 
-app/html/index.html
-
-里面有全部效果实现
+> app/html/index.html里面有全部效果实现
 
 ### ibootstrap针对移动端开发的UI库；
 
@@ -24,7 +23,7 @@ app/html/index.html
 
 * 针对不用屏幕尺寸做了精细调整，去除了大、中、小尺寸的额外样式。
 
-* table在移动端使用非常少见，所有该版本未加入table样式。
+* table在移动端使用非常少见，所以该版本未加入table样式。
 
 * ibootstrap只针对移动端，减少了不必要的前缀兼容，可以看成jQuery和Zepto的关系。
 
@@ -270,8 +269,12 @@ EQ2:
     </div>
 
 ```
+##### 虽然还没有到介绍组件环节，但这里用到组件功能，需要提前提一下
+data-codemsg="{{5}}s后再次获取" 这个属性表示点击后，需要展示的文本内容，{{5}}表示倒计时时间，时间结束后，回复初始文本,看下图
 
+![](https://raw.githubusercontent.com/wuguzi/ibootstrap/master/showImg/code.png)
 
+------------------------------------
 ##### list 列表
 
 <!--![](http://e.picphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=d363870b45a7d933bba8e0779d7bea62/64380cd7912397dd7d94251b5e82b2b7d1a287c4.jpg)-->
