@@ -1,7 +1,7 @@
 const onButton = {
     init: function() {
         const th = this;
-        $('[data-target-paButton]').on('click', function() {
+        $('[data-target- ]').on('click', function() {
             const node = $($(this).data('target-pabutton'));
             if(node.attr('data-state') === 'on') {
                 th.off(node);
