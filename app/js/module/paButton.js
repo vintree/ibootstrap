@@ -22,19 +22,33 @@ const onButton = {
     },
     onPaButton: function() {
         const th = this;
-        $.fn.extend({
+
+        $.extend($.fn, {
             onPaButton: function() {
                 th.on($(this));
             }
-        })
+        });
+
+        // $.fn.extend({
+        //     onPaButton: function() {
+        //         th.on($(this));
+        //     }
+        // })
     },
     offPaButton: function() {
         const th = this;
-        $.fn.extend({
+
+        $.extend($.fn, {
             offPaButton: function() {
                 th.off($(this));
             }
-        })
+        });
+        
+        // $.fn.extend({
+        //     offPaButton: function() {
+        //         th.off($(this));
+        //     }
+        // })
     }
 }
 

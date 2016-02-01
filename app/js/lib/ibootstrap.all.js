@@ -20,17 +20,17 @@ webpackJsonp([0,1],[
 
 	var _viewReveal2 = _interopRequireDefault(_viewReveal);
 
-	var _paButton = __webpack_require__(7);
+	var _paButton = __webpack_require__(8);
 
 	var _paButton2 = _interopRequireDefault(_paButton);
 
-	var _codeMsg = __webpack_require__(8);
+	var _codeMsg = __webpack_require__(9);
 
 	var _codeMsg2 = _interopRequireDefault(_codeMsg);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(9);
+	__webpack_require__(10);
 
 	// 基本组件
 
@@ -40,10 +40,10 @@ webpackJsonp([0,1],[
 	_autoFont2.default.init();
 
 	_popup2.default.init();
-	_viewReveal2.default.init();
 	_tips2.default.init();
 	_paButton2.default.init();
 	_codeMsg2.default.init();
+	_viewReveal2.default.init();
 
 /***/ },
 /* 1 */
@@ -150,7 +150,7 @@ webpackJsonp([0,1],[
 	        });
 	    },
 	    showPop: function showPop() {
-	        $.fn.extend({
+	        $.extend($.fn, {
 	            showPop: function showPop() {
 	                var node = $(this);
 	                if (node.hasClass('pop')) {
@@ -159,9 +159,19 @@ webpackJsonp([0,1],[
 	                }
 	            }
 	        });
+	        // $.fn.extend({
+	        //     showPop: function() {
+	        //         var node = $(this);
+	        //         if(node.hasClass('pop')) {
+	        //             Events.untouchmove();
+	        //             node.addClass('fadeIn').removeClass('fade');
+	        //         }
+	        //     }
+	        // })
 	    },
 	    hidePop: function hidePop() {
-	        $.fn.extend({
+
+	        $.extend($.fn, {
 	            hidePop: function hidePop() {
 	                var node = $(this);
 	                if (node.hasClass('pop')) {
@@ -173,6 +183,19 @@ webpackJsonp([0,1],[
 	                }
 	            }
 	        });
+
+	        // $.fn.extend({
+	        //     hidePop: function() {
+	        //         var node = $(this);
+	        //         if(node.hasClass('pop')) {
+	        //             Events.touchmove();
+	        //             node.addClass('fade').removeClass('fadeIn');
+	        //             setTimeout(function() {
+	        //                 node.removeClass('fade');
+	        //             }, 300);
+	        //         }
+	        //     }
+	        // });
 	    }
 	}; /*
 	       触发对象：需添加 data-target-pop = '#target'
@@ -236,7 +259,8 @@ webpackJsonp([0,1],[
 	        });
 	    },
 	    showTips: function showTips() {
-	        $.fn.extend({
+
+	        $.extend($.fn, {
 	            showTips: function showTips(time) {
 	                var node = $(this);
 	                if (node.hasClass('tips')) {
@@ -251,9 +275,26 @@ webpackJsonp([0,1],[
 	                }
 	            }
 	        });
+
+	        // $.fn.extend({
+	        //     showTips: function(time) {
+	        //         const node = $(this);
+	        //         if(node.hasClass('tips')) {
+	        //             node.addClass('fadeIn');
+	        //         }
+	        //         if(!!time) {
+	        //             setTimeout(function() {
+	        //                 if(node.hasClass('fadeIn')) {
+	        //                     node.hideTip();
+	        //                 }
+	        //             }, time);
+	        //         }
+	        //     }
+	        // })
 	    },
 	    hideTips: function hideTips() {
-	        $.fn.extend({
+
+	        $.extend($.fn, {
 	            hideTips: function hideTips() {
 	                var node = $(this);
 	                node.addClass('fade').removeClass('fadeIn');
@@ -262,6 +303,16 @@ webpackJsonp([0,1],[
 	                }, 300);
 	            }
 	        });
+
+	        // $.fn.extend({
+	        //     hideTips: function() {
+	        //         const node = $(this);
+	        //         node.addClass('fade').removeClass('fadeIn');
+	        //         setTimeout(function() {
+	        //             node.removeClass('fade');
+	        //         }, 300);
+	        //     }
+	        // })
 	    }
 	};
 
@@ -311,10 +362,12 @@ webpackJsonp([0,1],[
 	    showView: function showView() {},
 	    hideView: function hideView() {}
 	};
+
 	module.exports = view;
 
 /***/ },
-/* 7 */
+/* 7 */,
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -322,7 +375,7 @@ webpackJsonp([0,1],[
 	var onButton = {
 	    init: function init() {
 	        var th = this;
-	        $('[data-target-paButton]').on('click', function () {
+	        $('[data-target- ]').on('click', function () {
 	            var node = $($(this).data('target-pabutton'));
 	            if (node.attr('data-state') === 'on') {
 	                th.off(node);
@@ -343,26 +396,40 @@ webpackJsonp([0,1],[
 	    },
 	    onPaButton: function onPaButton() {
 	        var th = this;
-	        $.fn.extend({
+
+	        $.extend($.fn, {
 	            onPaButton: function onPaButton() {
 	                th.on($(this));
 	            }
 	        });
+
+	        // $.fn.extend({
+	        //     onPaButton: function() {
+	        //         th.on($(this));
+	        //     }
+	        // })
 	    },
 	    offPaButton: function offPaButton() {
 	        var th = this;
-	        $.fn.extend({
+
+	        $.extend($.fn, {
 	            offPaButton: function offPaButton() {
 	                th.off($(this));
 	            }
 	        });
+
+	        // $.fn.extend({
+	        //     offPaButton: function() {
+	        //         th.off($(this));
+	        //     }
+	        // })
 	    }
 	};
 
 	module.exports = onButton;
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -396,16 +463,16 @@ webpackJsonp([0,1],[
 	module.exports = codeMsg;
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(10);
+	var content = __webpack_require__(11);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(13)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -422,10 +489,10 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(12)();
 	// imports
 
 
@@ -436,7 +503,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	/*
@@ -492,7 +559,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

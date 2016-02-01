@@ -13,7 +13,8 @@ import CodeMsg from "../module/codeMsg";
 autoFont.init();
 
 Popup.init();
-ViewReveal.init();
 Tips.init();
 PaButton.init();
 CodeMsg.init();
+
+ViewReveal.init();

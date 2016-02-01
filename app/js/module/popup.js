@@ -26,7 +26,7 @@ var popup = {
         });
     },
     showPop: function() {
-        $.fn.extend({
+        $.extend($.fn, {
             showPop: function() {
                 var node = $(this);
                 if(node.hasClass('pop')) {
@@ -34,10 +34,20 @@ var popup = {
                     node.addClass('fadeIn').removeClass('fade');
                 }
             }
-        })
+        });
+        // $.fn.extend({
+        //     showPop: function() {
+        //         var node = $(this);
+        //         if(node.hasClass('pop')) {
+        //             Events.untouchmove();
+        //             node.addClass('fadeIn').removeClass('fade');
+        //         }
+        //     }
+        // })
     },
     hidePop: function() {
-        $.fn.extend({
+
+        $.extend($.fn, {
             hidePop: function() {
                 var node = $(this);
                 if(node.hasClass('pop')) {
@@ -49,6 +59,21 @@ var popup = {
                 }
             }
         });
+
+
+        
+        // $.fn.extend({
+        //     hidePop: function() {
+        //         var node = $(this);
+        //         if(node.hasClass('pop')) {
+        //             Events.touchmove();
+        //             node.addClass('fade').removeClass('fadeIn');
+        //             setTimeout(function() {
+        //                 node.removeClass('fade');
+        //             }, 300);
+        //         }
+        //     }
+        // });
     }
 }
 

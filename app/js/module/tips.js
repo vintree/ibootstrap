@@ -21,7 +21,8 @@ const tips = {
         });
     },
     showTips: function() {
-        $.fn.extend({
+
+        $.extend($.fn, {
             showTips: function(time) {
                 const node = $(this);
                 if(node.hasClass('tips')) {
@@ -35,10 +36,27 @@ const tips = {
                     }, time);
                 }
             }
-        })
+        });
+
+        // $.fn.extend({
+        //     showTips: function(time) {
+        //         const node = $(this);
+        //         if(node.hasClass('tips')) {
+        //             node.addClass('fadeIn');
+        //         }
+        //         if(!!time) {
+        //             setTimeout(function() {
+        //                 if(node.hasClass('fadeIn')) {
+        //                     node.hideTip();
+        //                 }
+        //             }, time);
+        //         }
+        //     }
+        // })
     },
     hideTips: function() {
-        $.fn.extend({
+
+        $.extend($.fn, {
             hideTips: function() {
                 const node = $(this);
                 node.addClass('fade').removeClass('fadeIn');
@@ -46,7 +64,18 @@ const tips = {
                     node.removeClass('fade');
                 }, 300);
             }
-        })
+        });
+
+
+        // $.fn.extend({
+        //     hideTips: function() {
+        //         const node = $(this);
+        //         node.addClass('fade').removeClass('fadeIn');
+        //         setTimeout(function() {
+        //             node.removeClass('fade');
+        //         }, 300);
+        //     }
+        // })
     }
 }
 
