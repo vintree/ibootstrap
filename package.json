@@ -4,7 +4,8 @@
   "description": "移动端轻量级UI库",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -w"
   },
   "repository": {
     "type": "git",

@@ -20,19 +20,20 @@ webpackJsonp([0,1],[
 
 	var _viewReveal2 = _interopRequireDefault(_viewReveal);
 
-	var _paButton = __webpack_require__(8);
+	var _paButton = __webpack_require__(7);
 
 	var _paButton2 = _interopRequireDefault(_paButton);
 
-	var _codeMsg = __webpack_require__(9);
+	var _codeMsg = __webpack_require__(8);
 
 	var _codeMsg2 = _interopRequireDefault(_codeMsg);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(10);
+	__webpack_require__(9);
 
 	// 基本组件
+
 
 	// 功能组件
 
@@ -59,7 +60,7 @@ webpackJsonp([0,1],[
 	var userAgent = __webpack_require__(2);
 	var autoFont = {
 	    init: function init() {
-	        var setFontSize = (function () {
+	        var setFontSize = function () {
 	            // 获取window 宽度,动态计算
 	            var _self = this;
 	            _self.width = 750; //psd750px宽度 ,default
@@ -74,7 +75,7 @@ webpackJsonp([0,1],[
 	            };
 	            console.log("html fontSize: ", _self.widthProportion());
 	            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() + "px; !important");
-	        }).bind(window);
+	        }.bind(window);
 	        // init 初始化
 	        setFontSize();
 	        //手机改变状态时也执行该方法
@@ -159,18 +160,8 @@ webpackJsonp([0,1],[
 	                }
 	            }
 	        });
-	        // $.fn.extend({
-	        //     showPop: function() {
-	        //         var node = $(this);
-	        //         if(node.hasClass('pop')) {
-	        //             Events.untouchmove();
-	        //             node.addClass('fadeIn').removeClass('fade');
-	        //         }
-	        //     }
-	        // })
 	    },
 	    hidePop: function hidePop() {
-
 	        $.extend($.fn, {
 	            hidePop: function hidePop() {
 	                var node = $(this);
@@ -183,24 +174,12 @@ webpackJsonp([0,1],[
 	                }
 	            }
 	        });
-
-	        // $.fn.extend({
-	        //     hidePop: function() {
-	        //         var node = $(this);
-	        //         if(node.hasClass('pop')) {
-	        //             Events.touchmove();
-	        //             node.addClass('fade').removeClass('fadeIn');
-	        //             setTimeout(function() {
-	        //                 node.removeClass('fade');
-	        //             }, 300);
-	        //         }
-	        //     }
-	        // });
 	    }
 	}; /*
 	       触发对象：需添加 data-target-pop = '#target'
 	       释放对象：需添加 data-close-pop = '.pop'
 	   */
+
 
 	module.exports = popup;
 
@@ -366,8 +345,7 @@ webpackJsonp([0,1],[
 	module.exports = view;
 
 /***/ },
-/* 7 */,
-/* 8 */
+/* 7 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -375,7 +353,7 @@ webpackJsonp([0,1],[
 	var onButton = {
 	    init: function init() {
 	        var th = this;
-	        $('[data-target- ]').on('click', function () {
+	        $('[data-target-paButton]').on('click', function () {
 	            var node = $($(this).data('target-pabutton'));
 	            if (node.attr('data-state') === 'on') {
 	                th.off(node);
@@ -402,12 +380,6 @@ webpackJsonp([0,1],[
 	                th.on($(this));
 	            }
 	        });
-
-	        // $.fn.extend({
-	        //     onPaButton: function() {
-	        //         th.on($(this));
-	        //     }
-	        // })
 	    },
 	    offPaButton: function offPaButton() {
 	        var th = this;
@@ -417,19 +389,13 @@ webpackJsonp([0,1],[
 	                th.off($(this));
 	            }
 	        });
-
-	        // $.fn.extend({
-	        //     offPaButton: function() {
-	        //         th.off($(this));
-	        //     }
-	        // })
 	    }
 	};
 
 	module.exports = onButton;
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -463,16 +429,16 @@ webpackJsonp([0,1],[
 	module.exports = codeMsg;
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(11);
+	var content = __webpack_require__(10);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(13)(content, {});
+	var update = __webpack_require__(12)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -489,10 +455,10 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(12)();
+	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
@@ -503,7 +469,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	/*
@@ -559,7 +525,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -775,7 +741,6 @@ webpackJsonp([0,1],[
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-		var sourceMap = obj.sourceMap;
 
 		if(media) {
 			styleElement.setAttribute("media", media)
@@ -793,7 +758,6 @@ webpackJsonp([0,1],[
 
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
-		var media = obj.media;
 		var sourceMap = obj.sourceMap;
 
 		if(sourceMap) {

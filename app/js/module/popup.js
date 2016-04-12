@@ -35,18 +35,8 @@ var popup = {
                 }
             }
         });
-        // $.fn.extend({
-        //     showPop: function() {
-        //         var node = $(this);
-        //         if(node.hasClass('pop')) {
-        //             Events.untouchmove();
-        //             node.addClass('fadeIn').removeClass('fade');
-        //         }
-        //     }
-        // })
     },
     hidePop: function() {
-
         $.extend($.fn, {
             hidePop: function() {
                 var node = $(this);
@@ -59,22 +49,7 @@ var popup = {
                 }
             }
         });
-
-
-        
-        // $.fn.extend({
-        //     hidePop: function() {
-        //         var node = $(this);
-        //         if(node.hasClass('pop')) {
-        //             Events.touchmove();
-        //             node.addClass('fade').removeClass('fadeIn');
-        //             setTimeout(function() {
-        //                 node.removeClass('fade');
-        //             }, 300);
-        //         }
-        //     }
-        // });
     }
-}
+};
 
 module.exports = popup;

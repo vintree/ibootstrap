@@ -1,7 +1,7 @@
 const onButton = {
     init: function() {
         const th = this;
-        $('[data-target- ]').on('click', function() {
+        $('[data-target-paButton]').on('click', function() {
             const node = $($(this).data('target-pabutton'));
             if(node.attr('data-state') === 'on') {
                 th.off(node);
@@ -28,12 +28,6 @@ const onButton = {
                 th.on($(this));
             }
         });
-
-        // $.fn.extend({
-        //     onPaButton: function() {
-        //         th.on($(this));
-        //     }
-        // })
     },
     offPaButton: function() {
         const th = this;
@@ -43,12 +37,6 @@ const onButton = {
                 th.off($(this));
             }
         });
-        
-        // $.fn.extend({
-        //     offPaButton: function() {
-        //         th.off($(this));
-        //     }
-        // })
     }
 }
 
